@@ -1,0 +1,455 @@
+module Base
+{
+	model PU_FL_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_ML_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowmiddlelightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_MR_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowmiddlelightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FL_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_ML_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowmiddleheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_MR_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowmiddleheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Bullbar_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Chains_FL_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_ML_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_MR_VanSeats_Light
+    {
+        mesh = vehicles/VanSeatsArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_ML_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_MR_VanSeats_Heavy
+    {
+        mesh = vehicles/VanSeatsArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_VanSeats
+    {
+        mesh = vehicles/VanSeatsArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	template vehicle PU_Armor_VanSeats
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_VanSeats_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_VanSeats_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_VanSeats_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_VanSeats_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowMiddleLeft,
+		part ATA2ProtectionWindowMiddleLeft
+		{
+            model Light
+            {
+                file = PU_ML_Window_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_ML_Window_VanSeats_Heavy,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowMiddleRight,
+		part ATA2ProtectionWindowMiddleRight
+		{
+            model Light
+            {
+                file = PU_MR_Window_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_MR_Window_VanSeats_Heavy,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRear,
+        part ATA2ProtectionWindowRear
+        {
+            model Light
+            {
+                file = PU_R_Window_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorsRear,
+        part ATA2ProtectionDoorsRear
+        {
+            model Light
+            {
+                file = PU_Trunk_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorMiddleLeft,
+        part ATA2ProtectionDoorMiddleLeft
+        {
+            model Light
+            {
+                file = PU_Door_ML_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_ML_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorMiddleRight,
+        part ATA2ProtectionDoorMiddleRight
+        {
+            model Light
+            {
+                file = PU_Door_MR_VanSeats_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_MR_VanSeats_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_VanSeats,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_VanSeats,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_VanSeats,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_VanSeats,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_VanSeats,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_VanSeats,
+            }
+        }
+	}
+}

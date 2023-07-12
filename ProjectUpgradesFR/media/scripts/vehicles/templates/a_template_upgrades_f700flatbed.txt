@@ -1,0 +1,318 @@
+module Base
+{
+	model PU_FL_Window_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_f700flatbed
+    {
+        mesh = vehicles/f700flatbedArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_f700flatbed
+    {
+        mesh = vehicles/f700flatbedArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_f700flatbed
+    {
+        mesh = vehicles/f700flatbedArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_f700flatbed
+    {
+        mesh = vehicles/f700flatbedArmor|chaintires2,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_f700flatbed
+    {
+        mesh = vehicles/f700flatbedArmor|chaintires2,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Door_R_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|doorlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_f700flatbed_Light
+    {
+        mesh = vehicles/f700flatbedArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Door_R_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|doorheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_f700flatbed_Heavy
+    {
+        mesh = vehicles/f700flatbedArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	template vehicle PU_Armor_f700flatbed
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_f700flatbed_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_f700flatbed_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_f700flatbed_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_f700flatbed_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_f700flatbed_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_f700flatbed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRear,
+        part ATA2ProtectionWindowRear
+        {
+            model Light
+            {
+                file = PU_R_Window_f700flatbed_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_f700flatbed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Door_R_f700flatbed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_R_f700flatbed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_f700flatbed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_f700flatbed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_f700flatbed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_f700flatbed_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_f700flatbed,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_f700flatbed,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_f700flatbed,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_f700flatbed,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_f700flatbed,
+            }
+        }
+	}
+}

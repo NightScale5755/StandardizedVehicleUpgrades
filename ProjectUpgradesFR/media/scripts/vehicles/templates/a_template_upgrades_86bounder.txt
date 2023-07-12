@@ -1,0 +1,257 @@
+module Base
+{
+	model PU_F_Window_86bounder_Light
+    {
+        mesh = vehicles/86bounderArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_86bounder_Light
+    {
+        mesh = vehicles/86bounderArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_F_Window_86bounder_Heavy
+    {
+        mesh = vehicles/86bounderArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_86bounder_Heavy
+    {
+        mesh = vehicles/86bounderArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_86bounder
+    {
+        mesh = vehicles/86bounderArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_86bounder
+    {
+        mesh = vehicles/86bounderArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_86bounder
+    {
+        mesh = vehicles/86bounderArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_86bounder
+    {
+        mesh = vehicles/86bounderArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_86bounder
+    {
+        mesh = vehicles/86bounderArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_86bounder_Light
+    {
+        mesh = vehicles/86bounderArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_86bounder_Light
+    {
+        mesh = vehicles/86bounderArmor|doorheavyright,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_86bounder_Heavy
+    {
+        mesh = vehicles/86bounderArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_86bounder_Heavy
+    {
+        mesh = vehicles/86bounderArmor|doorheavyright,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Rack_86bounder
+    {
+        mesh = vehicles/86bounderArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_86bounder
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_86bounder_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_86bounder_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRear,
+        part ATA2ProtectionWindowRear
+        {
+            model Light
+            {
+                file = PU_R_Window_86bounder_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_86bounder_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Door_R_86bounder_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_R_86bounder_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_86bounder_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_86bounder_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorMiddleRight,
+        part ATA2ProtectionDoorMiddleRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_86bounder_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_86bounder_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_86bounder,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_86bounder,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_86bounder,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_86bounder,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_86bounder,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_86bounder,
+            }
+        }
+	}
+}

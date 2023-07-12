@@ -1,0 +1,318 @@
+module Base
+{
+	model PU_FL_Window_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_51chevy3100
+    {
+        mesh = vehicles/51chevy3100Armor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_51chevy3100
+    {
+        mesh = vehicles/51chevy3100Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_51chevy3100
+    {
+        mesh = vehicles/51chevy3100Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_51chevy3100
+    {
+        mesh = vehicles/51chevy3100Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_51chevy3100
+    {
+        mesh = vehicles/51chevy3100Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_51chevy3100_Light
+    {
+        mesh = vehicles/51chevy3100Armor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_51chevy3100_Heavy
+    {
+        mesh = vehicles/51chevy3100Armor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	template vehicle PU_Armor_51chevy3100
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_51chevy3100_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_51chevy3100_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_51chevy3100_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_51chevy3100_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_51chevy3100_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_51chevy3100_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRear,
+        part ATA2ProtectionWindowRear
+        {
+            model Light
+            {
+                file = PU_R_Window_51chevy3100_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_51chevy3100_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_51chevy3100_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_51chevy3100_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_51chevy3100_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_51chevy3100_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_51chevy3100_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_51chevy3100_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_51chevy3100,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_51chevy3100,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_51chevy3100,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_51chevy3100,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_51chevy3100,
+            }
+        }
+	}
+}

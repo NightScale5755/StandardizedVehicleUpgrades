@@ -1,0 +1,455 @@
+module Base
+{
+	model PU_FL_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_RR_87suburban_Light
+    {
+        mesh = vehicles/87suburbanArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_RR_87suburban_Heavy
+    {
+        mesh = vehicles/87suburbanArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_87suburban
+    {
+        mesh = vehicles/87suburbanArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_87suburban
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_87suburban_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_87suburban_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_87suburban_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_87suburban_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowMiddleLeft,
+		part ATA2ProtectionWindowMiddleLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_87suburban_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_87suburban_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowMiddleRight,
+		part ATA2ProtectionWindowMiddleRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_87suburban_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_87suburban_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRear,
+        part ATA2ProtectionWindowRear
+        {
+            model Light
+            {
+                file = PU_R_Window_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorsRear,
+        part ATA2ProtectionDoorsRear
+        {
+            model Light
+            {
+                file = PU_Trunk_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorMiddleLeft,
+        part ATA2ProtectionDoorMiddleLeft
+        {
+            model Light
+            {
+                file = PU_Door_RL_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RL_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorMiddleRight,
+        part ATA2ProtectionDoorMiddleRight
+        {
+            model Light
+            {
+                file = PU_Door_RR_87suburban_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RR_87suburban_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_87suburban,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_87suburban,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_87suburban,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_87suburban,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_87suburban,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_87suburban,
+            }
+        }
+	}
+}
