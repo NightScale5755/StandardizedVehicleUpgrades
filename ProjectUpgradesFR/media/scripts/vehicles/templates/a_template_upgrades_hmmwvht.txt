@@ -42,14 +42,6 @@ module Base
         scale = 0.004525,
     }
 
-	model PU_R_Window_hmmwvht_Light
-    {
-        mesh = vehicles/hmmwvhtArmor|windowlightrear,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004525,
-    }
-
 	model PU_FL_Window_hmmwvht_Heavy
     {
         mesh = vehicles/hmmwvhtArmor|windowfrontheavyleft,
@@ -87,14 +79,6 @@ module Base
 	model PU_F_Window_hmmwvht_Heavy
     {
         mesh = vehicles/hmmwvhtArmor|windowheavyfront,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004525,
-    }
-
-	model PU_R_Window_hmmwvht_Heavy
-    {
-        mesh = vehicles/hmmwvhtArmor|windowheavyrear,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
         scale = 0.004525,
@@ -232,6 +216,13 @@ module Base
 				file = PU_FL_Window_hmmwvht_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -244,6 +235,13 @@ module Base
 			{
 				file = PU_FR_Window_hmmwvht_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
@@ -258,6 +256,13 @@ module Base
 				file = PU_RL_Window_hmmwvht_Heavy,
 			}
 		}
+        part WindowRearLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowRearLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
 		part ATA2ProtectionWindowRearRight
@@ -270,6 +275,13 @@ module Base
 			{
 				file = PU_RR_Window_hmmwvht_Heavy,
 			}
+		}
+        part WindowRearRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowRearRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -284,19 +296,13 @@ module Base
                 file = PU_F_Window_hmmwvht_Heavy,
             }
         }
-
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        part Windshield
         {
-            model Light
+            table uninstall
             {
-                file = PU_R_Window_hmmwvht_Light,
+                requireUninstalled = ATA2ProtectionWindshield,
             }
-            model Heavy
-            {
-                file = PU_R_Window_hmmwvht_Heavy,
-            }
-        }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionTrunk,
         part ATA2ProtectionTrunk
@@ -310,6 +316,13 @@ module Base
                 file = PU_Trunk_hmmwvht_Heavy,
             }
         }
+        part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -323,6 +336,13 @@ module Base
                 file = PU_Door_FL_hmmwvht_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -336,6 +356,13 @@ module Base
                 file = PU_Door_FR_hmmwvht_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorRearLeft,
         part ATA2ProtectionDoorRearLeft
@@ -349,6 +376,13 @@ module Base
                 file = PU_Door_RL_hmmwvht_Heavy,
             }
         }
+        part DoorRearLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorRearLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorRearRight,
         part ATA2ProtectionDoorRearRight
@@ -362,6 +396,13 @@ module Base
                 file = PU_Door_RR_hmmwvht_Heavy,
             }
         }
+        part DoorRearRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorRearRight,
+            }
+		}
 
         part Tire*
         {

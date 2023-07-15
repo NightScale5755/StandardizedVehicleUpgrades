@@ -230,6 +230,13 @@ module Base
 				file = PU_FL_Window_astrovan_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -242,6 +249,13 @@ module Base
 			{
 				file = PU_FR_Window_astrovan_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowMiddleLeft,
@@ -256,6 +270,13 @@ module Base
 				file = PU_ML_Window_astrovan_Heavy,
 			}
 		}
+        part WindowMiddleLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowMiddleLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowMiddleRight,
 		part ATA2ProtectionWindowMiddleRight
@@ -268,6 +289,13 @@ module Base
 			{
 				file = PU_MR_Window_astrovan_Heavy,
 			}
+		}
+        part WindowMiddleRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowMiddleRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -282,9 +310,16 @@ module Base
                 file = PU_F_Window_astrovan_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -295,6 +330,13 @@ module Base
                 file = PU_R_Window_astrovan_Heavy,
             }
         }
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionTrunk,
         part ATA2ProtectionTrunk
@@ -308,6 +350,13 @@ module Base
                 file = PU_Trunk_astrovan_Heavy,
             }
         }
+        part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -321,6 +370,13 @@ module Base
                 file = PU_Door_FL_astrovan_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -334,6 +390,13 @@ module Base
                 file = PU_Door_FR_astrovan_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorMiddleRight,
         part ATA2ProtectionDoorMiddleRight
@@ -347,6 +410,13 @@ module Base
                 file = PU_Door_MR_astrovan_Heavy,
             }
         }
+        part DoorMiddleRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorMiddleRight,
+            }
+		}
 
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
@@ -356,6 +426,27 @@ module Base
                 file = PU_Bullbar_astrovan,
             }
         }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
 
         part Tire*
         {

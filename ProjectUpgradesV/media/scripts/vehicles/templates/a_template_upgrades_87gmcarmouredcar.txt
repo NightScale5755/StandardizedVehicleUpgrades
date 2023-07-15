@@ -1,217 +1,183 @@
 module Base
 {
-	model PU_FL_Window_OffRoad_Light
+	model PU_FL_Window_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowfrontlightleft,
+        mesh = vehicles/87gmcarmouredcarArmor|windowfrontlightleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_FR_Window_OffRoad_Light
+	model PU_FR_Window_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowfrontlightleft,
+        mesh = vehicles/87gmcarmouredcarArmor|windowfrontlightleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_RL_Window_OffRoad_Light
+	model PU_F_Window_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowrearlightleft,
+        mesh = vehicles/87gmcarmouredcarArmor|windowlightfront,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_RR_Window_OffRoad_Light
+	model PU_R_Window_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowrearlightleft,
+        mesh = vehicles/87gmcarmouredcarArmor|windowlightrear,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
+    }
+
+	model PU_FL_Window_87gmcarmouredcar_Heavy
+    {
+        mesh = vehicles/87gmcarmouredcarArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.01,
+    }
+
+	model PU_FR_Window_87gmcarmouredcar_Heavy
+    {
+        mesh = vehicles/87gmcarmouredcarArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_F_Window_OffRoad_Light
+	model PU_F_Window_87gmcarmouredcar_Heavy
     {
-        mesh = vehicles/OffRoadArmor|windowlightfront,
+        mesh = vehicles/87gmcarmouredcarArmor|windowheavyfront,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_R_Window_OffRoad_Light
+	model PU_R_Window_87gmcarmouredcar_Heavy
     {
-        mesh = vehicles/OffRoadArmor|windowlightrear,
+        mesh = vehicles/87gmcarmouredcarArmor|windowheavyrear,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_FL_Window_OffRoad_Heavy
+	model PU_Bullbar_87gmcarmouredcar
     {
-        mesh = vehicles/OffRoadArmor|windowfrontheavyleft,
+        mesh = vehicles/87gmcarmouredcarArmor|pushbar_1,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_FR_Window_OffRoad_Heavy
+	model PU_Chains_FL_87gmcarmouredcar
     {
-        mesh = vehicles/OffRoadArmor|windowfrontheavyleft,
+        mesh = vehicles/87gmcarmouredcarArmor|chaintires,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
+    }
+
+	model PU_Chains_FR_87gmcarmouredcar
+    {
+        mesh = vehicles/87gmcarmouredcarArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_RL_Window_OffRoad_Heavy
+	model PU_Chains_RL_87gmcarmouredcar
     {
-        mesh = vehicles/OffRoadArmor|windowrearheavyleft,
+        mesh = vehicles/87gmcarmouredcarArmor|chaintires2,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_RR_Window_OffRoad_Heavy
+	model PU_Chains_RR_87gmcarmouredcar
     {
-        mesh = vehicles/OffRoadArmor|windowrearheavyleft,
+        mesh = vehicles/87gmcarmouredcarArmor|chaintires2,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_F_Window_OffRoad_Heavy
+	model PU_Trunk_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowheavyfront,
+        mesh = vehicles/87gmcarmouredcarArmor|trunklightrear,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_R_Window_OffRoad_Heavy
+	model PU_Door_FL_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|windowheavyrear,
+        mesh = vehicles/87gmcarmouredcarArmor|doorlightleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_Bullbar_OffRoad
+	model PU_Door_FR_87gmcarmouredcar_Light
     {
-        mesh = vehicles/OffRoadArmor|pushbar_1,
+        mesh = vehicles/87gmcarmouredcarArmor|doorlightleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
-    }
-
-	model PU_Chains_FL_OffRoad
-    {
-        mesh = vehicles/OffRoadArmor|chaintires,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.0035,
-    }
-
-	model PU_Chains_FR_OffRoad
-    {
-        mesh = vehicles/OffRoadArmor|chaintires,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.0035,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_Chains_RL_OffRoad
+	model PU_Trunk_87gmcarmouredcar_Heavy
     {
-        mesh = vehicles/OffRoadArmor|chaintires,
+        mesh = vehicles/87gmcarmouredcarArmor|trunkheavyrear,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.0035,
+        scale = 0.01,
     }
 
-	model PU_Chains_RR_OffRoad
+	model PU_Door_FL_87gmcarmouredcar_Heavy
     {
-        mesh = vehicles/OffRoadArmor|chaintires,
+        mesh = vehicles/87gmcarmouredcarArmor|doorheavyleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.0035,
+        scale = 0.01,
+    }
+
+	model PU_Door_FR_87gmcarmouredcar_Heavy
+    {
+        mesh = vehicles/87gmcarmouredcarArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.01,
         invertX = TRUE,
     }
 
-	model PU_Trunk_OffRoad_Light
+	model PU_Rack_87gmcarmouredcar
     {
-        mesh = vehicles/OffRoadArmor|trunklightrear,
+        mesh = vehicles/87gmcarmouredcarArmor|roofrack,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
-        scale = 0.004,
+        scale = 0.01,
     }
 
-	model PU_Door_FL_OffRoad_Light
-    {
-        mesh = vehicles/OffRoadArmor|doorlightleft,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-    }
-
-	model PU_Door_FR_OffRoad_Light
-    {
-        mesh = vehicles/OffRoadArmor|doorlightleft,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-        invertX = TRUE,
-    }
-
-	model PU_Trunk_OffRoad_Heavy
-    {
-        mesh = vehicles/OffRoadArmor|trunkheavyrear,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-    }
-
-	model PU_Door_FL_OffRoad_Heavy
-    {
-        mesh = vehicles/OffRoadArmor|doorheavyleft,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-    }
-
-	model PU_Door_FR_OffRoad_Heavy
-    {
-        mesh = vehicles/OffRoadArmor|doorheavyleft,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-        invertX = TRUE,
-    }
-
-	model PU_Rack_OffRoad
-    {
-        mesh = vehicles/OffRoadArmor|roofrack,
-        texture = Vehicles/puv_parts,
-        shader = vehiclewheel,
-        scale = 0.004,
-    }
-
-	template vehicle PU_Armor_OffRoad
+	template vehicle PU_Armor_87gmcarmouredcar
 	{
         template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
 		part ATA2ProtectionWindowFrontLeft
 		{
 			model Light
 			{
-				file = PU_FL_Window_OffRoad_Light,
+				file = PU_FL_Window_87gmcarmouredcar_Light,
 			}
 			model Heavy
 			{
-				file = PU_FL_Window_OffRoad_Heavy,
+				file = PU_FL_Window_87gmcarmouredcar_Heavy,
 			}
 		}
         part WindowFrontLeft
@@ -227,11 +193,11 @@ module Base
 		{
 			model Light
 			{
-				file = PU_FR_Window_OffRoad_Light,
+				file = PU_FR_Window_87gmcarmouredcar_Light,
 			}
 			model Heavy
 			{
-				file = PU_FR_Window_OffRoad_Heavy,
+				file = PU_FR_Window_87gmcarmouredcar_Heavy,
 			}
 		}
         part WindowFrontRight
@@ -242,56 +208,16 @@ module Base
             }
 		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
-		part ATA2ProtectionWindowRearLeft
-		{
-			model Light
-			{
-				file = PU_RL_Window_OffRoad_Light,
-			}
-			model Heavy
-			{
-				file = PU_RL_Window_OffRoad_Heavy,
-			}
-		}
-        part WindowRearLeft
-        {
-            table uninstall
-            {
-                requireUninstalled = ATA2ProtectionWindowRearLeft,
-            }
-		}
-
-        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
-		part ATA2ProtectionWindowRearRight
-		{
-			model Light
-			{
-				file = PU_RR_Window_OffRoad_Light,
-			}
-			model Heavy
-			{
-				file = PU_RR_Window_OffRoad_Heavy,
-			}
-		}
-        part WindowRearRight
-        {
-            table uninstall
-            {
-                requireUninstalled = ATA2ProtectionWindowRearRight,
-            }
-		}
-
         template = ATA2Protection/part/ATA2ProtectionWindshield,
         part ATA2ProtectionWindshield
         {
             model Light
             {
-                file = PU_F_Window_OffRoad_Light,
+                file = PU_F_Window_87gmcarmouredcar_Light,
             }
             model Heavy
             {
-                file = PU_F_Window_OffRoad_Heavy,
+                file = PU_F_Window_87gmcarmouredcar_Heavy,
             }
         }
         part Windshield
@@ -307,11 +233,11 @@ module Base
         {
             model Light
             {
-                file = PU_R_Window_OffRoad_Light,
+                file = PU_R_Window_87gmcarmouredcar_Light,
             }
             model Heavy
             {
-                file = PU_R_Window_OffRoad_Heavy,
+                file = PU_R_Window_87gmcarmouredcar_Heavy,
             }
         }
         part WindshieldRear
@@ -327,11 +253,11 @@ module Base
         {
             model Light
             {
-                file = PU_Trunk_OffRoad_Light,
+                file = PU_Trunk_87gmcarmouredcar_Light,
             }
             model Heavy
             {
-                file = PU_Trunk_OffRoad_Heavy,
+                file = PU_Trunk_87gmcarmouredcar_Heavy,
             }
         }
         part TrunkDoor
@@ -347,11 +273,11 @@ module Base
         {
             model Light
             {
-                file = PU_Door_FL_OffRoad_Light,
+                file = PU_Door_FL_87gmcarmouredcar_Light,
             }
             model Heavy
             {
-                file = PU_Door_FL_OffRoad_Heavy,
+                file = PU_Door_FL_87gmcarmouredcar_Heavy,
             }
         }
         part DoorFrontLeft
@@ -367,11 +293,11 @@ module Base
         {
             model Light
             {
-                file = PU_Door_FR_OffRoad_Light,
+                file = PU_Door_FR_87gmcarmouredcar_Light,
             }
             model Heavy
             {
-                file = PU_Door_FR_OffRoad_Heavy,
+                file = PU_Door_FR_87gmcarmouredcar_Heavy,
             }
         }
         part DoorFrontRight
@@ -387,7 +313,7 @@ module Base
         {
             model Default
             {
-                file = PU_Bullbar_OffRoad,
+                file = PU_Bullbar_87gmcarmouredcar,
             }
         }
         part EngineDoor
@@ -439,7 +365,7 @@ module Base
         {
             model ATAProtection
             {
-                file = PU_Chains_FL_OffRoad,
+                file = PU_Chains_FL_87gmcarmouredcar,
             }
         }
 
@@ -447,7 +373,7 @@ module Base
         {
             model ATAProtection
             {
-                file = PU_Chains_RL_OffRoad,
+                file = PU_Chains_RL_87gmcarmouredcar,
             }
         }
 
@@ -455,7 +381,7 @@ module Base
         {
             model ATAProtection
             {
-                file = PU_Chains_FR_OffRoad,
+                file = PU_Chains_FR_87gmcarmouredcar,
             }
         }
 
@@ -463,7 +389,7 @@ module Base
         {
             model ATAProtection
             {
-                file = PU_Chains_RR_OffRoad,
+                file = PU_Chains_RR_87gmcarmouredcar,
             }
         }
 
@@ -472,7 +398,7 @@ module Base
         {
             model Default
             {
-                file = PU_Rack_OffRoad,
+                file = PU_Rack_87gmcarmouredcar,
             }
         }
 	}

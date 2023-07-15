@@ -17,6 +17,23 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_ML_Window_VanAmbulance_Light
+    {
+        mesh = vehicles/VanArmor|windowmiddlelightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_MR_Window_VanAmbulance_Light
+    {
+        mesh = vehicles/VanArmor|windowmiddlelightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
 	model PU_F_Window_VanAmbulance_Light
     {
         mesh = vehicles/VanArmor|windowlightfront,
@@ -44,6 +61,23 @@ module Base
 	model PU_FR_Window_VanAmbulance_Heavy
     {
         mesh = vehicles/VanArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_ML_Window_VanAmbulance_Heavy
+    {
+        mesh = vehicles/VanArmor|windowmiddleheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_MR_Window_VanAmbulance_Heavy
+    {
+        mesh = vehicles/VanArmor|windowmiddleheavyleft,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
         scale = 0.004,
@@ -133,6 +167,23 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Door_ML_VanAmbulance_Light
+    {
+        mesh = vehicles/VanArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_MR_VanAmbulance_Light
+    {
+        mesh = vehicles/VanArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
 	model PU_Trunk_VanAmbulance_Heavy
     {
         mesh = vehicles/VanArmor|trunkheavyrear,
@@ -158,6 +209,23 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Door_ML_VanAmbulance_Heavy
+    {
+        mesh = vehicles/VanArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_MR_VanAmbulance_Heavy
+    {
+        mesh = vehicles/VanArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
 	template vehicle PU_Armor_VanAmbulance
 	{
         template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
@@ -172,6 +240,13 @@ module Base
 				file = PU_FL_Window_VanAmbulance_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -184,6 +259,13 @@ module Base
 			{
 				file = PU_FR_Window_VanAmbulance_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -198,9 +280,16 @@ module Base
                 file = PU_F_Window_VanAmbulance_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -211,9 +300,16 @@ module Base
                 file = PU_R_Window_VanAmbulance_Heavy,
             }
         }
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionTrunk,
-        part ATA2ProtectionTrunk
+        template = ATA2Protection/part/ATA2ProtectionDoorsRear,
+        part ATA2ProtectionDoorsRear
         {
             model Light
             {
@@ -224,6 +320,20 @@ module Base
                 file = PU_Trunk_VanAmbulance_Heavy,
             }
         }
+        part TruckBed
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorsRear,
+            }
+		}
+        part DoorRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorsRear,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -237,6 +347,13 @@ module Base
                 file = PU_Door_FL_VanAmbulance_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -250,6 +367,13 @@ module Base
                 file = PU_Door_FR_VanAmbulance_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
 
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
@@ -259,6 +383,27 @@ module Base
                 file = PU_Bullbar_VanAmbulance,
             }
         }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
 
         part Tire*
         {

@@ -3,6 +3,7 @@ module Base
 	vehicle ATAPetyarbuilt
 	{
 		template! = ATAPetyarbuilt,
+		template! = PU_Armor_ATAPetyarbuilt,
 		extents = 3.8154 1.3846 11.0154,
 		physicsChassisShape = 3.5077 1.3846 11.0154,
 		centerOfMassOffset = 0.0000 -0.1385 0.2923,
@@ -24,6 +25,13 @@ module Base
 		}
 
 		template = Windshield/part/WindshieldRear,
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
 		part WindshieldRear
 		{
@@ -113,6 +121,7 @@ module Base
 	vehicle ATAPetyarbuiltSleeper
 	{
 		template! = ATAPetyarbuiltSleep,
+		template! = PU_Armor_ATAPetyarbuiltSleeper,
 		extents = 3.8154 1.3846 11.0154,
 		physicsChassisShape = 3.5077 1.3846 11.0154,
 		centerOfMassOffset = 0.0000 -0.1385 0.2923,
@@ -185,6 +194,7 @@ module Base
 	vehicle ATAPetyarbuiltSleeperLong
 	{
 		template! = ATAPetyarbuiltSleep,
+		template! = PU_Armor_ATAPetyarbuiltSleeper,
 
 		area TireMiddleLeft
 		{

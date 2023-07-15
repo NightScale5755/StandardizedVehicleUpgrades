@@ -547,7 +547,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -686,16 +686,16 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["51chevy3100"].parts["ATA2Bullbar"] = {
     Default = {
@@ -961,7 +961,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -1004,7 +1004,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -1143,16 +1143,16 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["64mustang"].parts["ATA2Bullbar"] = {
     Default = {
@@ -1672,16 +1672,16 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["68wildcat"].parts["ATA2Bullbar"] = {
     Default = {
@@ -2199,16 +2199,16 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["68wildcatconvert"].parts["ATA2Bullbar"] = {
     Default = {
@@ -2656,16 +2656,16 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
     Light = {
@@ -3124,16 +3124,16 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
     Light = {
@@ -3560,16 +3560,16 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["73pinto"].parts["ATA2Bullbar"] = {
     Default = {
@@ -4073,16 +4073,16 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["80f350quad"].parts["ATA2Bullbar"] = {
     Default = {
@@ -4600,16 +4600,16 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["80f350ambulance"].parts["ATA2Bullbar"] = {
     Default = {
@@ -5129,16 +5129,16 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["85vicwag"].parts["ATA2Bullbar"] = {
     Default = {
@@ -5672,16 +5672,16 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
     Light = {
@@ -6114,16 +6114,16 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["85vicranger"].parts["ATA2Bullbar"] = {
     Default = {
@@ -6487,16 +6487,16 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["86bounder"].parts["ATA2Bullbar"] = {
     Default = {
@@ -7001,16 +7001,16 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["86econolinerv"].parts["ATA2Bullbar"] = {
     Default = {
@@ -7061,7 +7061,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TruckBed"},
+        protection = {"TrunkDoor"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -7098,7 +7098,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TruckBed"},
+        protection = {"TrunkDoor"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -7521,16 +7521,16 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
     Light = {
@@ -8005,16 +8005,16 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["87suburban"].parts["ATA2Bullbar"] = {
     Default = {
@@ -8102,7 +8102,7 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionDoorsRear"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "DoorRear"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -8556,16 +8556,16 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["92wrangler"].parts["ATA2Bullbar"] = {
     Default = {
@@ -9043,16 +9043,16 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["astrovan"].parts["ATA2Bullbar"] = {
     Default = {
@@ -9563,6 +9563,17 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
+
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
+
 NewCarTuningTable["chevystepvanswat"].parts["ATA2Bullbar"] = {
     Default = {
         icon = "media/ui/tuning2/van_bullbar_1.png",
@@ -9945,16 +9956,16 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["isuzuboxmccoy"].parts["ATA2Bullbar"] = {
     Default = {
@@ -10402,16 +10413,16 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["f700box"].parts["ATA2Bullbar"] = {
     Default = {
@@ -10462,7 +10473,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TruckBed"},
+        protection = {"TrunkDoor"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -10499,7 +10510,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TruckBed"},
+        protection = {"TrunkDoor"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -11354,16 +11365,16 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["schoolbus"].parts["ATA2Bullbar"] = {
     Default = {
@@ -11867,16 +11878,16 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
@@ -12201,16 +12212,16 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
     Light = {

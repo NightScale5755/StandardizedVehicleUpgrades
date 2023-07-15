@@ -248,6 +248,13 @@ module Base
 				file = PU_FL_Window_68wildcat_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -260,6 +267,13 @@ module Base
 			{
 				file = PU_FR_Window_68wildcat_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
@@ -274,6 +288,13 @@ module Base
 				file = PU_RL_Window_68wildcat_Heavy,
 			}
 		}
+        part WindowRearLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowRearLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
 		part ATA2ProtectionWindowRearRight
@@ -286,6 +307,13 @@ module Base
 			{
 				file = PU_RR_Window_68wildcat_Heavy,
 			}
+		}
+        part WindowRearRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowRearRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -300,9 +328,16 @@ module Base
                 file = PU_F_Window_68wildcat_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -313,6 +348,13 @@ module Base
                 file = PU_R_Window_68wildcat_Heavy,
             }
         }
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionTrunk,
         part ATA2ProtectionTrunk
@@ -326,6 +368,13 @@ module Base
                 file = PU_Trunk_68wildcat_Heavy,
             }
         }
+        part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -339,6 +388,13 @@ module Base
                 file = PU_Door_FL_68wildcat_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -352,6 +408,13 @@ module Base
                 file = PU_Door_FR_68wildcat_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorRearLeft,
         part ATA2ProtectionDoorRearLeft
@@ -365,6 +428,13 @@ module Base
                 file = PU_Door_RL_68wildcat_Heavy,
             }
         }
+        part DoorRearLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorRearLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorRearRight,
         part ATA2ProtectionDoorRearRight
@@ -378,6 +448,13 @@ module Base
                 file = PU_Door_RR_68wildcat_Heavy,
             }
         }
+        part DoorRearRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorRearRight,
+            }
+		}
 
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
@@ -387,6 +464,27 @@ module Base
                 file = PU_Bullbar_68wildcat,
             }
         }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
 
         part Tire*
         {

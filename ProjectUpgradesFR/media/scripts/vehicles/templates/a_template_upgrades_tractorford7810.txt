@@ -148,6 +148,13 @@ module Base
 				file = PU_FL_Window_tractorford7810_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -160,6 +167,13 @@ module Base
 			{
 				file = PU_FR_Window_tractorford7810_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -174,9 +188,16 @@ module Base
                 file = PU_F_Window_tractorford7810_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -187,6 +208,13 @@ module Base
                 file = PU_R_Window_tractorford7810_Heavy,
             }
         }
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -200,6 +228,13 @@ module Base
                 file = PU_Door_FL_tractorford7810_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -213,6 +248,13 @@ module Base
                 file = PU_Door_FR_tractorford7810_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
 
         part Tire*
         {

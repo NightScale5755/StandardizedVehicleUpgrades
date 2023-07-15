@@ -185,6 +185,14 @@ if not getActivatedMods():contains("SCKCO") then
 			addPartsFromVehicleScript = "",
 			parts = {}
 		}
+		NewCarTuningTable["Van_jeffersondoc"] = {
+			addPartsFromVehicleScript = "",
+			parts = {}
+		}
+		NewCarTuningTable["87gmcarmouredcar"] = {
+			addPartsFromVehicleScript = "",
+			parts = {}
+		}
 	end
 
 	-- CarNormal
@@ -192,7 +200,7 @@ if not getActivatedMods():contains("SCKCO") then
 		Light = {
 			shader = "vehiclewheel",
 			icon = "media/ui/tuning2/protection_window_side.png",
-			secondModel = "StaticPart",
+			--secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
 			removeIfBroken = true,
@@ -235,9 +243,10 @@ if not getActivatedMods():contains("SCKCO") then
 		Heavy = {
 			shader = "vehiclewheel",
 			icon = "media/ui/tuning2/protection_window_sheet_side.png",
-			secondModel = "StaticPart",
+			--secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -291,12 +300,15 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
 
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
 
 	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -386,16 +398,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["CarNormal"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["CarNormal"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -777,6 +789,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -830,12 +843,15 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
 
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
 
 	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -925,16 +941,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["CarLights"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["CarLights"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -1260,6 +1276,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -1313,12 +1330,15 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
 
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
 
 	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -1408,16 +1428,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["CarStationWagon"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["CarStationWagon"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -1799,6 +1819,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -1856,16 +1877,19 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.area = "TireRearLeft"
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearLeft"].Heavy.uninstall.area = "TireRearLeft"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
 
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.area = "TireRearRight"
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearRight"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
 
 	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -1955,16 +1979,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["SmallCar"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["SmallCar"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -2332,6 +2356,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -2377,6 +2402,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -2466,16 +2492,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["SmallCar02"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["SmallCar02"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -2843,6 +2869,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -2888,6 +2915,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -2977,16 +3005,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["PickUpTruck"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["PickUpTruck"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -3298,6 +3326,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -3343,6 +3372,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -3432,16 +3462,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["PickUpVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["PickUpVan"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -3763,7 +3793,7 @@ if not getActivatedMods():contains("SCKCO") then
 		Light = {
 			shader = "vehiclewheel",
 			icon = "media/ui/tuning2/protection_window_side.png",
-			secondModel = "StaticPart",
+			--secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
 			removeIfBroken = true,
@@ -3806,9 +3836,10 @@ if not getActivatedMods():contains("SCKCO") then
 		Heavy = {
 			shader = "vehiclewheel",
 			icon = "media/ui/tuning2/protection_window_sheet_side.png",
-			secondModel = "StaticPart",
+			--secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -3854,6 +3885,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -3943,16 +3975,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["Van"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["Van"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["Van"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["Van"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["Van"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -4320,6 +4352,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -4365,6 +4398,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -4454,16 +4488,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["VanRadio"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["VanRadio"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -4551,7 +4585,7 @@ if not getActivatedMods():contains("SCKCO") then
 		Heavy = {
 			icon = "media/ui/tuning2/van_hood_protection.png",
 			category = "Protection",
-			protection = {"TrunkDoor"},
+			protection = {"TruckBed", "DoorRear"},
 			install = {
 				use = {
 					SheetMetal = 4,
@@ -4775,6 +4809,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -4828,12 +4863,15 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleLeft"].Heavy.protection = {"WindowMiddleLeft"}
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleLeft"].Heavy.install.requireInstalled = {"WindowMiddleLeft"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleLeft"].Heavy.disableOpenWindowFromSeat = {"SeatMiddleLeft"}
 
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleRight"].Heavy.protection = {"WindowMiddleRight"}
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleRight"].Heavy.install.requireInstalled = {"WindowMiddleRight"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowMiddleRight"].Heavy.disableOpenWindowFromSeat = {"SeatMiddleRight"}
 
 	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -4923,16 +4961,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["VanSeats"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["VanSeats"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -5314,6 +5352,7 @@ if not getActivatedMods():contains("SCKCO") then
 			secondModel = "StaticPart",
 			category = "Protection",
 			protection = {"WindowFrontLeft"},
+			disableOpenWindowFromSeat = "SeatFrontLeft",
 			removeIfBroken = true,
 			install = {
 				weight = "auto",
@@ -5359,6 +5398,7 @@ if not getActivatedMods():contains("SCKCO") then
 
 	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
 
 	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshield"] = {
 		Light = {
@@ -5448,16 +5488,16 @@ if not getActivatedMods():contains("SCKCO") then
 		}
 	}
 
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshield"])
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshield"])
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+	NewCarTuningTable["StepVan"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 	NewCarTuningTable["StepVan"].parts["ATA2Bullbar"] = {
 		Default = {
@@ -5807,6 +5847,7 @@ if not getActivatedMods():contains("SCKCO") then
 		NewCarTuningTable["Van_ravencreekdoc"] = NewCarTuningTable["Van"]
 		NewCarTuningTable["Van_meadedoc"] = NewCarTuningTable["Van"]
 		NewCarTuningTable["Van_jeffersondoc"] = NewCarTuningTable["VanSeats"]
+		NewCarTuningTable["87gmcarmouredcar"] = NewCarTuningTable["PickUpVan"]
 	end
 
 	if getActivatedMods():contains("VVehicleEnhancer") then

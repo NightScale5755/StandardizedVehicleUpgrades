@@ -31,7 +31,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -76,7 +76,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -219,16 +219,16 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshield"] = {
     }
 }
 
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"] = copy(NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshield"])
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Light.protection = {"WindshieldRear"}
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Light.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Light.install.area = "TireRearRight"
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Light.uninstall.area = "TireRearRight"
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"] = copy(NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshield"])
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Light.protection = {"WindshieldRear"}
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Light.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Light.install.area = "TireRearRight"
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Light.uninstall.area = "TireRearRight"
 
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Heavy.protection = {"WindshieldRear"}
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Heavy.install.area = "TireRearRight"
-NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowRear"].Heavy.uninstall.area = "TireRearRight"
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Heavy.protection = {"WindshieldRear"}
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.requireInstalled = {"WindshieldRear"}
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Heavy.install.area = "TireRearRight"
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshieldRear"].Heavy.uninstall.area = "TireRearRight"
 
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2Bullbar"] = {
     Default = {
@@ -278,7 +278,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2Bullbar"] = {
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -318,7 +318,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -416,7 +416,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontLeft"
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -461,7 +461,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontLeft"
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -674,7 +674,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2Bullbar"] = {
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -714,7 +714,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionDoorFrontLeft"] 
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {

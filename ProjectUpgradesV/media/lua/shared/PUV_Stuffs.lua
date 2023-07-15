@@ -15,7 +15,8 @@ end
 ---@param vehicle string Name of the vehicle script
 ---@param armor string Name of a armor template
 ---@see DoVehicleParam
-local SetArmor = function(vehicle, armor)
+local SetArmor = function(vehicle, armor, module)
+	module = module or "Base"
 	DoVehicleParam(vehicle, "template! = " .. armor .. ",")
 end
 
@@ -64,6 +65,7 @@ if not getActivatedMods():contains("SCKCO") then
 		SetArmor("Van_ravencreekdoc","PU_Armor_Van");
 		SetArmor("Van_meadedoc","PU_Armor_Van");
 		SetArmor("Van_jeffersondoc","PU_Armor_VanSeats");
+		SetArmor("87gmcarmouredcar","PU_Armor_87gmcarmouredcar");
 	end
 
 	if getActivatedMods():contains("VVehicleEnhancer") then

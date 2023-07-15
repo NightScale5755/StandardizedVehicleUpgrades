@@ -128,9 +128,16 @@ module Base
                 file = PU_F_Window_86bounder_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -141,19 +148,13 @@ module Base
                 file = PU_R_Window_86bounder_Heavy,
             }
         }
-
-        template = ATA2Protection/part/ATA2ProtectionTrunk,
-        part ATA2ProtectionTrunk
+        part WindshieldRear
         {
-            model Light
+            table uninstall
             {
-                file = PU_Door_R_86bounder_Light,
+                requireUninstalled = ATA2ProtectionWindshieldRear,
             }
-            model Heavy
-            {
-                file = PU_Door_R_86bounder_Heavy,
-            }
-        }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionTrunk,
         part ATA2ProtectionTrunk
@@ -167,6 +168,13 @@ module Base
                 file = PU_Trunk_86bounder_Heavy,
             }
         }
+        part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorMiddleRight,
         part ATA2ProtectionDoorMiddleRight
@@ -180,6 +188,13 @@ module Base
                 file = PU_Door_FR_86bounder_Heavy,
             }
         }
+        part DoorMiddleRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorMiddleRight,
+            }
+		}
 
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
@@ -189,6 +204,27 @@ module Base
                 file = PU_Bullbar_86bounder,
             }
         }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
 
         part Tire*
         {
