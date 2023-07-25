@@ -142,6 +142,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_astrovan_Light
+    {
+        mesh = vehicles/astrovanArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_astrovan_Light
     {
         mesh = vehicles/astrovanArmor|trunklightrear,
@@ -170,6 +178,14 @@ module Base
 	model PU_Door_MR_astrovan_Light
     {
         mesh = vehicles/astrovanArmor|doormiddlelightright,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Hood_astrovan_Heavy
+    {
+        mesh = vehicles/astrovanArmor|hoodheavyfront,
         texture = Vehicles/puv_parts,
         shader = vehiclewheel,
         scale = 0.004525,
@@ -350,7 +366,21 @@ module Base
                 file = PU_Trunk_astrovan_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBed
         {
             table uninstall
             {
@@ -418,6 +448,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_astrovan_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_astrovan_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -431,6 +474,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

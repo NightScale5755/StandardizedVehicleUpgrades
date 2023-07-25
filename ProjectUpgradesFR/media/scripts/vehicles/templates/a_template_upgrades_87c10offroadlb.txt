@@ -100,6 +100,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_87c10offroadlb_Light
+    {
+        mesh = vehicles/87c10offroadlbArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_87c10offroadlb_Light
     {
         mesh = vehicles/87c10offroadlbArmor|trunklightrear,
@@ -123,6 +131,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_87c10offroadlb_Heavy
+    {
+        mesh = vehicles/87c10offroadlbArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_87c10offroadlb_Heavy
@@ -244,6 +260,13 @@ module Base
                 file = PU_Trunk_87c10offroadlb_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TruckBedOpen
         {
             table uninstall
@@ -289,6 +312,26 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_87c10offroadlb_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_87c10offroadlb_Heavy,
+            }
+        }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
 

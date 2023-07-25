@@ -108,6 +108,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_90ramsb_Light
+    {
+        mesh = vehicles/90ramsbArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_90ramsb_Light
     {
         mesh = vehicles/90ramsbArmor|trunklightrear,
@@ -131,6 +139,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_90ramsb_Heavy
+    {
+        mesh = vehicles/90ramsbArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_90ramsb_Heavy
@@ -172,6 +188,13 @@ module Base
 				file = PU_FL_Window_90ramsb_Heavy,
 			}
 		}
+        part WindowFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
 		part ATA2ProtectionWindowFrontRight
@@ -184,6 +207,13 @@ module Base
 			{
 				file = PU_FR_Window_90ramsb_Heavy,
 			}
+		}
+        part WindowFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindowFrontRight,
+            }
 		}
 
         template = ATA2Protection/part/ATA2ProtectionWindshield,
@@ -198,9 +228,16 @@ module Base
                 file = PU_F_Window_90ramsb_Heavy,
             }
         }
+        part Windshield
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshield,
+            }
+		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRear,
-        part ATA2ProtectionWindowRear
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
         {
             model Light
             {
@@ -211,6 +248,13 @@ module Base
                 file = PU_R_Window_90ramsb_Heavy,
             }
         }
+        part WindshieldRear
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionWindshieldRear,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionTrunk,
         part ATA2ProtectionTrunk
@@ -224,6 +268,20 @@ module Base
                 file = PU_Trunk_90ramsb_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBedOpen
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
         part ATA2ProtectionDoorFrontLeft
@@ -237,6 +295,13 @@ module Base
                 file = PU_Door_FL_90ramsb_Heavy,
             }
         }
+        part DoorFrontLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontLeft,
+            }
+		}
 
         template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
         part ATA2ProtectionDoorFrontRight
@@ -250,6 +315,26 @@ module Base
                 file = PU_Door_FR_90ramsb_Heavy,
             }
         }
+        part DoorFrontRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionDoorFrontRight,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_90ramsb_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_90ramsb_Heavy,
+            }
+        }
 
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
@@ -259,6 +344,28 @@ module Base
                 file = PU_Bullbar_90ramsb,
             }
         }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
+            }
+		}
+        part HeadlightLeft
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
+        part HeadlightRight
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2Bullbar,
+            }
+		}
 
         part Tire*
         {

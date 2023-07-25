@@ -25,6 +25,10 @@ NewCarTuningTable["ATAPetyarbuiltSleeperLong"] = {
     addPartsFromVehicleScript = "",
     parts = {}
 }
+NewCarTuningTable["TrailerTSMega"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
 
 -- ATAPetyarbuilt
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontLeft"] = {
@@ -79,6 +83,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontLeft"] = {
         --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
+        disableOpenWindowFromSeat = "SeatFrontLeft",
         removeIfBroken = true,
         install = {
             area = "TireFrontLeft",
@@ -130,6 +135,7 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontRight"].Heav
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.area = "TireFrontRight"
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontRight"].Heavy.uninstall.area = "TireFrontRight"
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -273,6 +279,86 @@ NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2Bullbar"] = {
             time = 20,
         }
     }
+}
+
+NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionHood"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"EngineDoor", "GasTank"},
+        install = {
+            use = {
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 4,
+				BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+            time = 55,
+		},
+        uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+	Heavy = {
+		icon = "media/ui/tuning2/van_hood_protection.png",
+		category = "Protection",
+		protection = {"EngineDoor", "GasTank"},
+		install = {
+			use = {
+				SheetMetal = 4,
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 6,
+				BlowTorch = 4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				primary = "Base.Wrench",
+			},
+			skills = {
+				MetalWelding = 6,
+			},
+			recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+			time = 55, 
+		},
+		uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				both = "Base.Crowbar",
+			},
+			skills = {
+				MetalWelding = 5,
+			},
+			result = "auto",
+			time = 33,
+		}
+	}
 }
 
 NewCarTuningTable["ATAPetyarbuilt"].parts["ATA2ProtectionDoorFrontLeft"] = {
@@ -464,6 +550,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontLeft"
         --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
+        disableOpenWindowFromSeat = "SeatFrontLeft",
         removeIfBroken = true,
         install = {
             area = "TireFrontLeft",
@@ -527,6 +614,7 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontRight
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.area = "TireFrontRight"
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontRight"].Heavy.uninstall.area = "TireFrontRight"
+NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
@@ -671,6 +759,86 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2Bullbar"] = {
     }
 }
 
+NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionHood"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"EngineDoor", "GasTank"},
+        install = {
+            use = {
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 4,
+				BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+            time = 55,
+		},
+        uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+	Heavy = {
+		icon = "media/ui/tuning2/van_hood_protection.png",
+		category = "Protection",
+		protection = {"EngineDoor", "GasTank"},
+		install = {
+			use = {
+				SheetMetal = 4,
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 6,
+				BlowTorch = 4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				primary = "Base.Wrench",
+			},
+			skills = {
+				MetalWelding = 6,
+			},
+			recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+			time = 55, 
+		},
+		uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				both = "Base.Crowbar",
+			},
+			skills = {
+				MetalWelding = 5,
+			},
+			result = "auto",
+			time = 33,
+		}
+	}
+}
+
 NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
@@ -788,6 +956,190 @@ NewCarTuningTable["ATAPetyarbuiltSleeper"].parts["ATA2ProtectionWheels"] = {
             time = 65, 
         },
         uninstall = {
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- petyarbuilt379 trailer - semi trailer with no windows, and an extra large rack. No bullbar.
+NewCarTuningTable["TrailerTSMega"].parts["ATA2ProtectionTrunk"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"TruckBed", "DoorRear"},
+        install = {
+            use = {
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 4,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        category = "Protection",
+        protection = {"TruckBed", "DoorRear"},
+        install = {
+            use = {
+                SheetMetal = 4,
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 6,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 33,
+        }
+    }
+}
+
+NewCarTuningTable["TrailerTSMega"].parts["ATA2InteractiveTrunkRoofRack"] = {
+    Default = {
+        icon = "media/ui/tuning2/roof_rack_2.png",
+        category = "Trunks",
+        --interactiveTrunk = {
+            --filling = {"ATA_VanDeRumba_roof_bag1", "ATA_VanDeRumba_roof_bag2", "ATA_VanDeRumba_roof_bag3", "ATA_VanDeRumba_roof_bag4", "ATA_VanDeRumba_roof_bag5", "ATA_VanDeRumba_roof_bag6"},
+            --items = {
+                --{
+                    --itemTypes = {"MetalDrum"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
+                --},
+                --{
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
+                --},
+            --}
+        --},
+        containerCapacity = 200,
+        install = {
+            area = "TruckBed",
+            use = {
+                MetalPipe = 6,
+                SheetMetal = 6,
+                MetalBar=4,
+                BlowTorch = 10,
+                Screws=12,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+            time = 60, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            animation = "ATA_IdleLeverOpenHigh",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 40,
+        }
+    }
+}
+
+NewCarTuningTable["TrailerTSMega"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
             sound = "ATA2InstallWheelChain",
             use = {
                 BlowTorch=4,

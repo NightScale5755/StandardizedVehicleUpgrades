@@ -19,6 +19,15 @@ local SetArmor = function(vehicle, armor)
 	DoVehicleParam(vehicle, "template! = " .. armor .. ",")
 end
 
+---Utility to change the horn sound of a vehicle
+---@param vehicle string Name of the vehicle script
+---@param sound string Name of a sound
+---@see DoVehicleParam
+---@see SetSirenSound
+local SetHornSound = function(vehicle, sound)
+	DoVehicleParam(vehicle, "sound { horn = " .. sound .. ",}")
+end
+
 if getActivatedMods():contains("FRUsedCars") then
 	SetArmor("51chevy3100","PU_Armor_51chevy3100");
 	SetArmor("51chevy3100old","PU_Armor_51chevy3100");
@@ -117,12 +126,18 @@ if getActivatedMods():contains("FRUsedCars") then
 	SetArmor("m35a2covered","PU_Armor_m35a2bed");
 	SetArmor("m35a2fuel","PU_Armor_m35a2bed");
 	SetArmor("m151canvas","PU_Armor_m151canvas");
-	SetArmor("pursuitspecial","PU_Armor_73falcon");
+	SetArmor("pursuitspecial","PU_Armor_pursuitspecial");
 	SetArmor("moveurself","PU_Armor_moveurself");
 	SetArmor("schoolbus","PU_Armor_schoolbus");
 	SetArmor("schoolbusshort","PU_Armor_schoolbusshort");
 	SetArmor("tractorford7810","PU_Armor_tractorford7810");
 	SetArmor("volvo244","PU_Armor_volvo244");
+	SetArmor("Trailercamperscamp","PU_Armor_Trailercamperscamp");
+	SetArmor("Trailer51chevy","PU_Armor_Trailer51chevy");
+	SetArmor("Trailermovingmedium","PU_Armor_Trailermovingmedium");
+	SetArmor("Trailermovingbig","PU_Armor_Trailermovingbig");
+	SetArmor("Trailerfuelsmall","PU_Armor_Trailermovingmedium");
+	SetArmor("Trailerfuelmedium","PU_Armor_Trailermovingbig");
 
 	if getActivatedMods():contains("STR") then
 		SetArmor("91blazerranger","PU_Armor_91blazer");
@@ -151,5 +166,11 @@ if getActivatedMods():contains("FRUsedCars") then
 
 	if getActivatedMods():contains("PogDogPolice") then
 		SetArmor("72beetlePogDog","PU_Armor_72beetle");
+		SetArmor("Trailermovingmediumpogdog","PU_Armor_Trailermovingmedium");
+		SetArmor("Trailermovingbigpogdog","PU_Armor_Trailermovingbig");
+	end
+
+	if getActivatedMods():contains("GarbageTruck") then
+		SetArmor("GarbageTruck","PU_Armor_GarbageTruck");
 	end
 end

@@ -108,6 +108,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_65gto_Light
+    {
+        mesh = vehicles/65gtoArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_65gto_Light
     {
         mesh = vehicles/65gtoArmor|trunklightrear,
@@ -131,6 +139,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_65gto_Heavy
+    {
+        mesh = vehicles/65gtoArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_65gto_Heavy
@@ -260,7 +276,21 @@ module Base
                 file = PU_Trunk_65gto_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBed
         {
             table uninstall
             {
@@ -308,6 +338,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_65gto_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_65gto_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -321,6 +364,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

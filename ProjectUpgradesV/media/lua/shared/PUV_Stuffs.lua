@@ -20,6 +20,14 @@ local SetArmor = function(vehicle, armor, module)
 	DoVehicleParam(vehicle, "template! = " .. armor .. ",")
 end
 
+---Utility to change the horn sound of a vehicle
+---@param vehicle string Name of the vehicle script
+---@param sound string Name of a sound
+---@see DoVehicleParam
+local SetHornSound = function(vehicle, sound)
+	DoVehicleParam(vehicle, "sound { horn = " .. sound .. ",}")
+end
+
 if not getActivatedMods():contains("SCKCO") then
 	SetArmor("CarLights","PU_Armor_CarLights");
 	SetArmor("CarLightsPolice","PU_Armor_CarLights");
@@ -92,5 +100,48 @@ if not getActivatedMods():contains("SCKCO") then
 		SetArmor("VanGenova","PU_Armor_Van");
 --		SetArmor("CarTaxiArg","PU_Armor_CarModern2");
 		SetArmor("StepVan_Nubasian","PU_Armor_StepVan");
+	end
+
+	if getActivatedMods():contains("HTowTruckFix") then
+		SetArmor("Chevalier_Rhino_TowTruck","PU_Armor_ChevalierRhino");
+		SetHornSound("Chevalier_Rhino_TowTruck","VehicleHornStandard");
+	end
+
+	if getActivatedMods():contains("ETKI") then
+		SetArmor("ETK2400tiEvo","PU_Armor_ETKEvo");
+		SetArmor("ETK2400tixEvo","PU_Armor_ETKEvo");
+		SetArmor("RallyETK","PU_Armor_ETK");
+		SetArmor("PreETK2400","PU_Armor_ETK");
+		SetArmor("PreETK2400i","PU_Armor_ETK");
+		SetArmor("PreETK2400ix","PU_Armor_ETK");
+		SetArmor("PreETK2400ti","PU_Armor_ETK");
+		SetArmor("PreETK2400tix","PU_Armor_ETK");
+		SetArmor("PostETK2400","PU_Armor_ETK");
+		SetArmor("PostETK2400i","PU_Armor_ETK");
+		SetArmor("PostETK2400ix","PU_Armor_ETK");
+		SetArmor("PostETK2400ti","PU_Armor_ETK");
+		SetArmor("PostETK2400tix","PU_Armor_ETK");
+		SetArmor("PreETK3000i","PU_Armor_ETK");
+		SetArmor("PreETK3000ix","PU_Armor_ETK");
+		SetArmor("PostETK3000i","PU_Armor_ETK");
+		SetArmor("PostETK3000ix","PU_Armor_ETK");
+	end
+
+	if getActivatedMods():contains("GavrilGrandMarshal") then
+		SetArmor("GavrilGrandMarshal","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalLuxe","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalSport","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalInterceptor","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalPolice","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalUndercover","PU_Armor_Gavril");
+		SetArmor("GavrilGrandMarshalTaxi","PU_Armor_Gavril");
+	end
+
+	if getActivatedMods():contains("IbishuCovet") then
+		SetArmor("IbishuCovetDx","PU_Armor_Covet");
+		SetArmor("IbishuCovetDxi","PU_Armor_Covet");
+		SetArmor("IbishuCovetLxi","PU_Armor_Covet");
+		SetArmor("IbishuCovetZxi","PU_Armor_Covet");
+		SetArmor("IbishuCovetZxiSpecial","PU_Armor_Covet");
 	end
 end

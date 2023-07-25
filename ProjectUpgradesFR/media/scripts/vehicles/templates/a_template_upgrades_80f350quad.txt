@@ -142,6 +142,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_80f350quad_Light
+    {
+        mesh = vehicles/80f350quadArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_80f350quad_Light
     {
         mesh = vehicles/80f350quadArmor|trunklightrear,
@@ -182,6 +190,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_80f350quad_Heavy
+    {
+        mesh = vehicles/80f350quadArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_80f350quad_Heavy
@@ -276,46 +292,6 @@ module Base
             }
 		}
 
-        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
-		part ATA2ProtectionWindowRearLeft
-		{
-			model Light
-			{
-				file = PU_RL_Window_80f350quad_Light,
-			}
-			model Heavy
-			{
-				file = PU_RL_Window_80f350quad_Heavy,
-			}
-		}
-        part WindowRearLeft
-        {
-            table uninstall
-            {
-                requireUninstalled = ATA2ProtectionWindowRearLeft,
-            }
-		}
-
-        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
-		part ATA2ProtectionWindowRearRight
-		{
-			model Light
-			{
-				file = PU_RR_Window_80f350quad_Light,
-			}
-			model Heavy
-			{
-				file = PU_RR_Window_80f350quad_Heavy,
-			}
-		}
-        part WindowRearRight
-        {
-            table uninstall
-            {
-                requireUninstalled = ATA2ProtectionWindowRearRight,
-            }
-		}
-
         template = ATA2Protection/part/ATA2ProtectionWindshield,
         part ATA2ProtectionWindshield
         {
@@ -368,6 +344,13 @@ module Base
                 file = PU_Trunk_80f350quad_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TruckBedOpen
         {
             table uninstall
@@ -456,6 +439,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_80f350quad_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_80f350quad_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -469,6 +465,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

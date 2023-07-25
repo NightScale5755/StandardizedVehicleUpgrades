@@ -162,6 +162,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_ATAPetyarbuilt_Light
+    {
+        mesh = vehicles/ATAPetyarbuiltArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.05,
+    }
+
 	model PU_Door_FL_ATAPetyarbuilt_Light
     {
         mesh = vehicles/ATAPetyarbuiltArmor|doorfrontlightleft,
@@ -177,6 +185,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.05,
         invertX = TRUE,
+    }
+
+	model PU_Hood_ATAPetyarbuilt_Heavy
+    {
+        mesh = vehicles/ATAPetyarbuiltArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.05,
     }
 
 	model PU_Door_FL_ATAPetyarbuilt_Heavy
@@ -345,6 +361,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_ATAPetyarbuilt_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_ATAPetyarbuilt_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -358,6 +387,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft
@@ -518,6 +548,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_ATAPetyarbuilt_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_ATAPetyarbuilt_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -531,6 +574,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

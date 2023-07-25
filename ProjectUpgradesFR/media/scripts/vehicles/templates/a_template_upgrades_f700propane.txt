@@ -108,6 +108,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_f700propane_Light
+    {
+        mesh = vehicles/f700propaneArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Door_R_f700propane_Light
     {
         mesh = vehicles/f700propaneArmor|doorlightrear,
@@ -131,6 +139,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_f700propane_Heavy
+    {
+        mesh = vehicles/f700propaneArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Door_R_f700propane_Heavy
@@ -252,7 +268,21 @@ module Base
                 file = PU_Door_R_f700propane_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBed
         {
             table uninstall
             {
@@ -300,6 +330,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_f700propane_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_f700propane_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -313,6 +356,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

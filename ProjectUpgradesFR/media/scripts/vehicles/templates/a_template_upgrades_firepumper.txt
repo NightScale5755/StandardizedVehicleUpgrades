@@ -134,6 +134,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_firepumper_Light
+    {
+        mesh = vehicles/firepumperArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_firepumper_Light
     {
         mesh = vehicles/firepumperArmor|trunklightrear,
@@ -174,6 +182,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_firepumper_Heavy
+    {
+        mesh = vehicles/firepumperArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_firepumper_Heavy
@@ -352,7 +368,21 @@ module Base
                 file = PU_Trunk_firepumper_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBed
         {
             table uninstall
             {
@@ -437,6 +467,26 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2ProtectionDoorRearRight,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_firepumper_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_firepumper_Heavy,
+            }
+        }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
 

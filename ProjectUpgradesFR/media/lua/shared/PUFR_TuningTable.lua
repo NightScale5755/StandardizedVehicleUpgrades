@@ -425,6 +425,30 @@ NewCarTuningTable["volvo244"] = {
     addPartsFromVehicleScript = "",
     parts = {}
 }
+NewCarTuningTable["Trailercamperscamp"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
+NewCarTuningTable["Trailer51chevy"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
+NewCarTuningTable["Trailermovingmedium"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
+NewCarTuningTable["Trailermovingbig"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
+NewCarTuningTable["Trailerfuelsmall"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
+NewCarTuningTable["Trailerfuelmedium"] = {
+    addPartsFromVehicleScript = "",
+    parts = {}
+}
 
 if getActivatedMods():contains("STR") then
 	NewCarTuningTable["91blazerranger"] = {
@@ -504,7 +528,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -596,7 +620,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontRight"].Light.i
 
 NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -746,7 +770,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -762,6 +786,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -783,7 +808,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -800,6 +825,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -820,10 +846,17 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -863,7 +896,7 @@ NewCarTuningTable["51chevy3100"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -1053,7 +1086,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontRight"].Light.ins
 
 NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["64mustang"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -1203,7 +1236,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -1219,6 +1252,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -1240,7 +1274,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -1257,6 +1291,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -1277,10 +1312,17 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["64mustang"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["64mustang"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["64mustang"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -1320,7 +1362,7 @@ NewCarTuningTable["64mustang"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -1380,7 +1422,7 @@ NewCarTuningTable["64mustang"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -1474,7 +1516,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -1517,7 +1559,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -1574,15 +1616,15 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearRight"].Light.inst
 
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = "SeatRearLeft"
 
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -1732,7 +1774,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -1748,6 +1790,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -1769,7 +1812,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -1786,6 +1829,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -1806,10 +1850,17 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["68wildcat"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["68wildcat"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["68wildcat"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -1849,7 +1900,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -1923,7 +1974,7 @@ NewCarTuningTable["68wildcat"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -2017,7 +2068,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -2060,7 +2111,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -2109,7 +2160,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontRight"].Li
 
 NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -2259,7 +2310,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -2275,6 +2326,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -2296,7 +2348,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -2313,6 +2365,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -2333,10 +2386,17 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -2376,7 +2436,7 @@ NewCarTuningTable["68wildcatconvert"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -2474,7 +2534,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -2517,7 +2577,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -2566,7 +2626,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontRight"].Li
 
 NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -2671,7 +2731,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -2687,6 +2747,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -2708,7 +2769,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -2725,6 +2786,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -2745,10 +2807,17 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionHood"].Light.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionHood"].Heavy.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -2788,7 +2857,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -2848,7 +2917,7 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -2937,12 +3006,12 @@ NewCarTuningTable["69chargerdaytona"].parts["ATA2ProtectionWheels"] = {
     }
 }
 
--- 71chevyc10offroadlb - 2 door pickup with rack, no bullbar
+-- 71chevyc10offroadlb - 2 door pickup without rack, no bullbar
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -2985,7 +3054,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontLeft"] 
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -3034,7 +3103,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontRight"]
 
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -3139,7 +3208,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -3155,6 +3224,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -3176,7 +3246,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -3193,6 +3263,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -3213,10 +3284,17 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionHood"].Light.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionHood"].Heavy.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -3256,7 +3334,7 @@ NewCarTuningTable["71chevyc10offroadlb"].parts["ATA2ProtectionDoorFrontLeft"] = 
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -3354,7 +3432,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -3397,7 +3475,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -3458,7 +3536,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRearRight"].Light.uninst
 
 NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["73pinto"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
@@ -3620,7 +3698,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -3636,6 +3714,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -3657,7 +3736,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -3674,6 +3753,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -3694,10 +3774,17 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["73pinto"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["73pinto"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["73pinto"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -3737,7 +3824,7 @@ NewCarTuningTable["73pinto"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -3797,7 +3884,7 @@ NewCarTuningTable["73pinto"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -3891,7 +3978,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -3934,7 +4021,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -3983,7 +4070,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontRight"].Light.in
 
 NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["80f350quad"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -4133,7 +4220,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -4149,6 +4236,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -4170,7 +4258,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TruckBedOpen"},
+        protection = {"TruckBedOpen", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -4187,6 +4275,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
             time = 55, 
         },
         uninstall = {
@@ -4207,10 +4296,17 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["80f350quad"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["80f350quad"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["80f350quad"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -4250,7 +4346,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -4324,7 +4420,7 @@ NewCarTuningTable["80f350quad"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -4418,7 +4514,7 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -4461,7 +4557,7 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -4510,7 +4606,7 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontRight"].Lig
 
 NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -4734,10 +4830,17 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionDoorsRear"] = {
     }
 }
 
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionDoorsRear"])
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -4777,7 +4880,7 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -4837,7 +4940,7 @@ NewCarTuningTable["80f350ambulance"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -4931,7 +5034,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -4974,7 +5077,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -5031,15 +5134,15 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearRight"].Light.insta
 
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = "SeatRearLeft"
 
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -5189,7 +5292,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -5205,6 +5308,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -5226,7 +5330,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -5243,6 +5347,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -5263,10 +5368,17 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["85vicwag"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["85vicwag"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["85vicwag"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -5306,7 +5418,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -5380,7 +5492,7 @@ NewCarTuningTable["85vicwag"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -5474,7 +5586,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -5517,7 +5629,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -5574,15 +5686,15 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearRight"].Light.i
 
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = "SeatRearLeft"
 
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -5687,7 +5799,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -5703,6 +5815,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -5724,7 +5837,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -5741,6 +5854,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -5761,10 +5875,17 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionHood"].Light.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionHood"].Heavy.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -5804,7 +5925,7 @@ NewCarTuningTable["85vicsheriff"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -5916,7 +6037,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -5959,7 +6080,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -6016,15 +6137,15 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearRight"].Light.in
 
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = "SeatRearLeft"
 
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -6174,7 +6295,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -6190,6 +6311,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -6211,7 +6333,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -6228,6 +6350,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -6248,10 +6371,17 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["85vicranger"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["85vicranger"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["85vicranger"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -6291,7 +6421,7 @@ NewCarTuningTable["85vicranger"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -6547,7 +6677,7 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -6563,6 +6693,7 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -6584,7 +6715,7 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -6601,6 +6732,7 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -6621,10 +6753,17 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["86bounder"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["86bounder"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["86bounder"].parts["ATA2ProtectionDoorMiddleRight"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorMiddleRight"},
         install = {
@@ -6664,7 +6803,7 @@ NewCarTuningTable["86bounder"].parts["ATA2ProtectionDoorMiddleRight"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorMiddleRight"},
         install = {
@@ -6717,7 +6856,7 @@ NewCarTuningTable["86bounder"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -6811,7 +6950,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -6854,7 +6993,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -6903,7 +7042,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontRight"].Light
 
 NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowMiddleLeft"] = copy(NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowFrontLeft"])
 NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionWindowMiddleLeft"].Light.protection = {"WindowFrontLeft"}
@@ -7061,7 +7200,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -7077,6 +7216,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -7098,7 +7238,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -7115,6 +7255,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -7135,10 +7276,17 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -7178,7 +7326,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -7245,7 +7393,7 @@ NewCarTuningTable["86econolinerv"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -7339,7 +7487,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -7382,7 +7530,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -7431,7 +7579,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontRight"].Lig
 
 NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -7536,7 +7684,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -7552,6 +7700,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -7573,7 +7722,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -7590,6 +7739,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -7610,10 +7760,17 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -7653,7 +7810,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -7713,7 +7870,7 @@ NewCarTuningTable["87blazeroffroad"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -7807,7 +7964,7 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -7850,7 +8007,7 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -7907,7 +8064,7 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowMiddleRight"].Light.i
 
 NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowMiddleLeft"].Heavy.protection = {"WindowMiddleLeft"}
 NewCarTuningTable["87suburban"].parts["ATA2ProtectionWindowMiddleLeft"].Heavy.install.requireInstalled = {"WindowMiddleLeft"}
@@ -8139,10 +8296,17 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionDoorsRear"] = {
     }
 }
 
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["87suburban"].parts["ATA2ProtectionDoorsRear"])
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["87suburban"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["87suburban"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -8182,7 +8346,7 @@ NewCarTuningTable["87suburban"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -8256,7 +8420,7 @@ NewCarTuningTable["87suburban"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -8350,7 +8514,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -8393,7 +8557,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -8454,7 +8618,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRearRight"].Light.uni
 
 NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["92wrangler"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
@@ -8616,7 +8780,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -8632,6 +8796,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -8653,7 +8818,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -8670,6 +8835,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -8690,10 +8856,17 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["92wrangler"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["92wrangler"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["92wrangler"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -8733,7 +8906,7 @@ NewCarTuningTable["92wrangler"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -8831,7 +9004,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -8875,7 +9048,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -9103,7 +9276,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -9119,6 +9292,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -9140,7 +9314,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -9157,6 +9331,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -9177,10 +9352,17 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["astrovan"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["astrovan"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["astrovan"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -9220,7 +9402,7 @@ NewCarTuningTable["astrovan"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -9287,7 +9469,7 @@ NewCarTuningTable["astrovan"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -9381,7 +9563,7 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -9424,7 +9606,7 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -9473,7 +9655,7 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontRight"].Li
 
 NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -9619,10 +9801,90 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2Bullbar"] = {
     }
 }
 
+NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionHood"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"EngineDoor", "GasTank"},
+        install = {
+            use = {
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 4,
+				BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+            time = 55,
+		},
+        uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+	Heavy = {
+		icon = "media/ui/tuning2/van_hood_protection.png",
+		category = "Protection",
+		protection = {"EngineDoor", "GasTank"},
+		install = {
+			use = {
+				SheetMetal = 4,
+				MetalPipe = 4,
+				MetalBar = 2,
+				Screws = 6,
+				BlowTorch = 4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				primary = "Base.Wrench",
+			},
+			skills = {
+				MetalWelding = 6,
+			},
+			recipes = {carRecipe},
+			requireInstalled = {"EngineDoor"},
+			time = 55, 
+		},
+		uninstall = {
+			animation = "ATA_IdleLeverOpenMid",
+			use = {
+				BlowTorch=4,
+			},
+			tools = {
+				bodylocation = "Base.WeldingMask",
+				both = "Base.Crowbar",
+			},
+			skills = {
+				MetalWelding = 5,
+			},
+			result = "auto",
+			time = 33,
+		}
+	}
+}
+
 NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -9662,7 +9924,7 @@ NewCarTuningTable["chevystepvanswat"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -9774,7 +10036,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -9817,7 +10079,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -9866,7 +10128,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontRight"].Light
 
 NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -10016,7 +10278,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -10032,6 +10294,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -10070,6 +10333,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -10090,10 +10354,17 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -10133,7 +10404,7 @@ NewCarTuningTable["isuzuboxmccoy"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -10231,7 +10502,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -10274,7 +10545,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -10323,7 +10594,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontRight"].Light.insta
 
 NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["f700box"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -10473,7 +10744,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -10489,6 +10760,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -10510,7 +10782,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -10527,6 +10799,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -10547,10 +10820,17 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["f700box"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["f700box"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["f700box"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["f700box"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["f700box"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["f700box"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -10590,7 +10870,7 @@ NewCarTuningTable["f700box"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -10650,7 +10930,7 @@ NewCarTuningTable["f700box"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -10744,7 +11024,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -10787,7 +11067,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -10844,15 +11124,15 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearRight"].Light.instal
 
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearLeft"].Heavy.protection = {"WindowRearLeft"}
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearLeft"].Heavy.install.requireInstalled = {"WindowRearLeft"}
-NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = {"SeatRearLeft"}
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearLeft"].Heavy.disableOpenWindowFromSeat = "SeatRearLeft"
 
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -10946,7 +11226,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -10962,6 +11242,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -10983,7 +11264,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -11000,6 +11281,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -11020,10 +11302,17 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionHood"].Light.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionHood"].Heavy.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -11063,7 +11352,7 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -11170,12 +11459,12 @@ NewCarTuningTable["hmmwvht"].parts["ATA2ProtectionWheels"] = {
     }
 }
 
--- schoolbus - large bus with exta large rack
+-- schoolbus - large bus with extra large rack
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -11218,7 +11507,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -11271,11 +11560,11 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRearRight"].Light.inst
 
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRearRight"].Heavy.protection = {"WindowRearRight"}
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRearRight"].Heavy.install.requireInstalled = {"WindowRearRight"}
-NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = {"SeatRearRight"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindowRearRight"].Heavy.disableOpenWindowFromSeat = "SeatRearRight"
 
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -11425,7 +11714,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -11441,6 +11730,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -11462,7 +11752,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -11479,6 +11769,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -11499,10 +11790,17 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["schoolbus"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionHood"].Light.protection = {"EngineDoor"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionHood"].Heavy.protection = {"EngineDoor"}
+NewCarTuningTable["schoolbus"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["schoolbus"].parts["ATA2ProtectionDoorFrontRight"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontRight"},
         install = {
@@ -11542,7 +11840,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2ProtectionDoorFrontRight"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontRight"},
         install = {
@@ -11602,7 +11900,7 @@ NewCarTuningTable["schoolbus"].parts["ATA2InteractiveTrunkRoofRack"] = {
                     --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
                 --},
                 --{
-                    --itemTypes = {"PetrolCan","EmptyPetrolCan"},
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
                     --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
                 --},
             --}
@@ -11696,7 +11994,7 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -11739,7 +12037,7 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -11788,7 +12086,7 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontRight"].Lig
 
 NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -11892,7 +12190,7 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionWindshieldRear"].Heavy
 NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -11932,7 +12230,7 @@ NewCarTuningTable["tractorford7810"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -12030,7 +12328,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Light = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         removeIfBroken = true,
@@ -12073,7 +12371,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontLeft"] = {
     Heavy = {
         shader = "vehiclewheel",
         icon = "media/ui/tuning2/protection_window_sheet_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"WindowFrontLeft"},
         disableOpenWindowFromSeat = "SeatFrontLeft",
@@ -12122,7 +12420,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontRight"].Light.in
 
 NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontRight"].Heavy.protection = {"WindowFrontRight"}
 NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontRight"].Heavy.install.requireInstalled = {"WindowFrontRight"}
-NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = {"SeatFrontRight"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindowFrontRight"].Heavy.disableOpenWindowFromSeat = "SeatFrontRight"
 
 NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWindshield"] = {
     Light = {
@@ -12227,7 +12525,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 MetalPipe = 4,
@@ -12243,6 +12541,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 4,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -12264,7 +12563,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
         category = "Protection",
-        protection = {"TrunkDoor"},
+        protection = {"TruckBed", "TrunkDoor", "GasTank"},
         install = {
             use = {
                 SheetMetal = 4,
@@ -12281,6 +12580,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
                 MetalWelding = 6,
             },
             recipes = {carRecipe},
+			requireInstalled = {"TruckBed", "TrunkDoor"},
             time = 55, 
         },
         uninstall = {
@@ -12301,10 +12601,17 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"] = {
     }
 }
 
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionHood"] = copy(NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionTrunk"])
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionHood"].Light.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionHood"].Light.install.requireInstalled = {"EngineDoor"}
+
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionHood"].Heavy.protection = {"HeadlightLeft", "HeadlightRight", "EngineDoor"}
+NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionHood"].Heavy.install.requireInstalled = {"EngineDoor"}
+
 NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionDoorFrontLeft"] = {
     Light = {
         icon = "media/ui/tuning2/bus_protection_window_side.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -12344,7 +12651,7 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionDoorFrontLeft"] = {
     },
     Heavy = {
         icon = "media/ui/tuning2/van_hood_protection.png",
-        secondModel = "StaticPart",
+        --secondModel = "StaticPart",
         category = "Protection",
         protection = {"DoorFrontLeft"},
         install = {
@@ -12418,6 +12725,866 @@ NewCarTuningTable["91blazerpd"].parts["ATA2ProtectionWheels"] = {
             time = 65, 
         },
         uninstall = {
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- scamp - camper trailer with no windows, and an expanded rack. No bullbar.
+NewCarTuningTable["Trailercamperscamp"].parts["ATA2ProtectionTrunk"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "TrunkDoor", "DoorRear"},
+        install = {
+            use = {
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 4,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "TrunkDoor", "DoorRear"},
+        install = {
+            use = {
+                SheetMetal = 4,
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 6,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 33,
+        }
+    }
+}
+
+NewCarTuningTable["Trailercamperscamp"].parts["ATA2ProtectionDoorFrontRight"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        --secondModel = "StaticPart",
+        category = "Protection",
+        protection = {"DoorFrontRight"},
+        install = {
+            weight = "auto",
+            use = {
+                MetalPipe = 4,
+                MetalBar=4,
+                Screws=4,
+                BlowTorch = 8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"DoorFrontRight"},
+            time = 60,
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 40,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        --secondModel = "StaticPart",
+        category = "Protection",
+        protection = {"DoorFrontRight"},
+        install = {
+            weight = "auto",
+            use = {
+                MetalPipe = 4,
+                MetalBar=4,
+                SheetMetal=6,
+                Screws=10,
+                BlowTorch = 8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"DoorFrontRight"},
+            time = 60,
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 40,
+        }
+    }
+}
+
+NewCarTuningTable["Trailercamperscamp"].parts["ATA2InteractiveTrunkRoofRack"] = {
+    Default = {
+        icon = "media/ui/tuning2/roof_rack_2.png",
+        category = "Trunks",
+        --interactiveTrunk = {
+            --filling = {"ATA_VanDeRumba_roof_bag1", "ATA_VanDeRumba_roof_bag2", "ATA_VanDeRumba_roof_bag3", "ATA_VanDeRumba_roof_bag4", "ATA_VanDeRumba_roof_bag5", "ATA_VanDeRumba_roof_bag6"},
+            --items = {
+                --{
+                    --itemTypes = {"MetalDrum"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
+                --},
+                --{
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
+                --},
+            --}
+        --},
+        containerCapacity = 100,
+        install = {
+            area = "TruckBed",
+            use = {
+                MetalPipe = 6,
+                SheetMetal = 6,
+                MetalBar=4,
+                BlowTorch = 10,
+                Screws=12,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+            time = 60, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            animation = "ATA_IdleLeverOpenHigh",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 40,
+        }
+    }
+}
+
+NewCarTuningTable["Trailercamperscamp"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- 51chevy trailer - old trailer with no windows, no rack, and no bullbar.
+NewCarTuningTable["Trailer51chevy"].parts["ATA2ProtectionTrunk"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"TruckBedOpen"},
+        install = {
+            use = {
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 4,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        category = "Protection",
+        protection = {"TruckBedOpen"},
+        install = {
+            use = {
+                SheetMetal = 4,
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 6,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 33,
+        }
+    }
+}
+
+NewCarTuningTable["Trailer51chevy"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- medium moving trailer - box trailer with no windows, and an expanded rack. No bullbar.
+NewCarTuningTable["Trailermovingmedium"].parts["ATA2ProtectionTrunk"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "DoorRear"},
+        install = {
+            use = {
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 4,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "DoorRear"},
+        install = {
+            use = {
+                SheetMetal = 4,
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 6,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 33,
+        }
+    }
+}
+
+NewCarTuningTable["Trailermovingmedium"].parts["ATA2InteractiveTrunkRoofRack"] = {
+    Default = {
+        icon = "media/ui/tuning2/roof_rack_2.png",
+        category = "Trunks",
+        --interactiveTrunk = {
+            --filling = {"ATA_VanDeRumba_roof_bag1", "ATA_VanDeRumba_roof_bag2", "ATA_VanDeRumba_roof_bag3", "ATA_VanDeRumba_roof_bag4", "ATA_VanDeRumba_roof_bag5", "ATA_VanDeRumba_roof_bag6"},
+            --items = {
+                --{
+                    --itemTypes = {"MetalDrum"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
+                --},
+                --{
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
+                --},
+            --}
+        --},
+        containerCapacity = 100,
+        install = {
+            area = "TruckBed",
+            use = {
+                MetalPipe = 6,
+                SheetMetal = 6,
+                MetalBar=4,
+                BlowTorch = 10,
+                Screws=12,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+            time = 60, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            animation = "ATA_IdleLeverOpenHigh",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 40,
+        }
+    }
+}
+
+NewCarTuningTable["Trailermovingmedium"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- big moving trailer - box trailer with no windows, and an extra large rack. No bullbar.
+NewCarTuningTable["Trailermovingbig"].parts["ATA2ProtectionTrunk"] = {
+    Light = {
+        icon = "media/ui/tuning2/bus_protection_window_side.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "TrunkDoor"},
+        install = {
+            use = {
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 4,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 32,
+        }
+    },
+    Heavy = {
+        icon = "media/ui/tuning2/van_hood_protection.png",
+        category = "Protection",
+        protection = {"TruckBedOpen", "TrunkDoor"},
+        install = {
+            use = {
+                SheetMetal = 4,
+                MetalPipe = 4,
+                MetalBar = 2,
+                Screws = 6,
+                BlowTorch = 4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 6,
+            },
+            recipes = {carRecipe},
+			requireInstalled = {"TruckBedOpen", "DoorRear"},
+            time = 55, 
+        },
+        uninstall = {
+            animation = "ATA_IdleLeverOpenMid",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 5,
+            },
+            result = "auto",
+            time = 33,
+        }
+    }
+}
+
+NewCarTuningTable["Trailermovingbig"].parts["ATA2InteractiveTrunkRoofRack"] = {
+    Default = {
+        icon = "media/ui/tuning2/roof_rack_2.png",
+        category = "Trunks",
+        --interactiveTrunk = {
+            --filling = {"ATA_VanDeRumba_roof_bag1", "ATA_VanDeRumba_roof_bag2", "ATA_VanDeRumba_roof_bag3", "ATA_VanDeRumba_roof_bag4", "ATA_VanDeRumba_roof_bag5", "ATA_VanDeRumba_roof_bag6"},
+            --items = {
+                --{
+                    --itemTypes = {"MetalDrum"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_barrel"},
+                --},
+                --{
+                    --itemTypes = {"PetrolCan", "EmptyPetrolCan"},
+                    --modelNameByCount = {"ATA_VanDeRumba_roof_gascan0", "ATA_VanDeRumba_roof_gascan1", "ATA_VanDeRumba_roof_gascan2", "ATA_VanDeRumba_roof_gascan3", "ATA_VanDeRumba_roof_gascan4", "ATA_VanDeRumba_roof_gascan5", "ATA_VanDeRumba_roof_gascan6", "ATA_VanDeRumba_roof_gascan7", "ATA_VanDeRumba_roof_gascan8", },
+                --},
+            --}
+        --},
+        containerCapacity = 200,
+        install = {
+            area = "TruckBed",
+            use = {
+                MetalPipe = 6,
+                SheetMetal = 6,
+                MetalBar=4,
+                BlowTorch = 10,
+                Screws=12,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                primary = "Base.Wrench",
+            },
+            skills = {
+                MetalWelding = 4,
+            },
+            recipes = {carRecipe},
+            time = 60, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            animation = "ATA_IdleLeverOpenHigh",
+            use = {
+                BlowTorch=8,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 3,
+            },
+            result = "auto",
+            time = 40,
+        }
+    }
+}
+
+NewCarTuningTable["Trailermovingbig"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- small fuel trailer - tanker trailer with no windows, no rack, and no bullbar.
+NewCarTuningTable["Trailerfuelsmall"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = {
+                BlowTorch=4,
+            },
+            tools = {
+                bodylocation = "Base.WeldingMask",
+                both = "Base.Crowbar",
+            },
+            skills = {
+                MetalWelding = 2,
+            },
+            result = {
+                UnusableMetal=2,
+            },
+            time = 40,
+        }
+    }
+}
+
+-- large fuel trailer - tanker trailer with no windows, no rack, and no bullbar.
+NewCarTuningTable["Trailerfuelmedium"].parts["ATA2ProtectionWheels"] = {
+    ATAProtection = {
+        removeIfBroken = true,
+        icon = "media/ui/tuning2/wheel_chain.png",
+        category = "Protection", 
+        protectionModel = true, 
+        protection = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"}, 
+        install = {
+            area = "TruckBed",
+            sound = "ATA2InstallWheelChain",
+            use = { 
+                ATAProtectionWheelsChain = 1,
+                BlowTorch = 4,
+            },
+            tools = { 
+                bodylocation = "Base.WeldingMask", 
+                primary = "Base.Wrench",
+            },
+            skills = {
+                Mechanics = 2,
+                MetalWelding = 3,
+            },
+            recipes = {carRecipe},
+            requireInstalled = {"TireFrontLeft", "TireFrontRight", "TireRearLeft", "TireRearRight"},
+            time = 65, 
+        },
+        uninstall = {
+            area = "TruckBed",
             sound = "ATA2InstallWheelChain",
             use = {
                 BlowTorch=4,
@@ -12543,6 +13710,12 @@ end
 
 if getActivatedMods():contains("PogDogPolice") then
 	NewCarTuningTable["72beetlePogDog"] = NewCarTuningTable["73pinto"]
+	NewCarTuningTable["Trailermovingmediumpogdog"] = NewCarTuningTable["Trailermovingmedium"]
+	NewCarTuningTable["Trailermovingbigpogdog"] = NewCarTuningTable["Trailermovingbig"]
+end
+
+if getActivatedMods():contains("GarbageTruck") then
+	NewCarTuningTable["GarbageTruck"] = NewCarTuningTable["68wildcatconvert"]
 end
 
 ATA2Tuning_AddNewCars(NewCarTuningTable)

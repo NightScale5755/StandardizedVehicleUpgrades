@@ -108,6 +108,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_PickUpTruck_Light
+    {
+        mesh = vehicles/PickUpTruckArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
 	model PU_Trunk_PickUpTruck_Light
     {
         mesh = vehicles/PickUpTruckArmor|trunklightrear,
@@ -131,6 +139,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004,
         invertX = TRUE,
+    }
+
+	model PU_Hood_PickUpTruck_Heavy
+    {
+        mesh = vehicles/PickUpTruckArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
     }
 
 	model PU_Trunk_PickUpTruck_Heavy
@@ -252,6 +268,13 @@ module Base
                 file = PU_Trunk_PickUpTruck_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TruckBedOpen
         {
             table uninstall
@@ -300,6 +323,19 @@ module Base
             }
 		}
 
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_PickUpTruck_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_PickUpTruck_Heavy,
+            }
+        }
+
         template = ATA2Bullbars/part/ATA2Bullbar,
         part ATA2Bullbar
         {
@@ -313,6 +349,7 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2Bullbar,
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
         part HeadlightLeft

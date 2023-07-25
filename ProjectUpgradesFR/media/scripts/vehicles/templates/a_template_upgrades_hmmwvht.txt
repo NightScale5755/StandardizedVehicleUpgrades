@@ -118,6 +118,14 @@ module Base
         invertX = TRUE,
     }
 
+	model PU_Hood_hmmwvht_Light
+    {
+        mesh = vehicles/hmmwvhtArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
 	model PU_Trunk_hmmwvht_Light
     {
         mesh = vehicles/hmmwvhtArmor|trunklightrear,
@@ -158,6 +166,14 @@ module Base
         shader = vehiclewheel,
         scale = 0.004525,
         invertX = TRUE,
+    }
+
+	model PU_Hood_hmmwvht_Heavy
+    {
+        mesh = vehicles/hmmwvhtArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
     }
 
 	model PU_Trunk_hmmwvht_Heavy
@@ -316,7 +332,21 @@ module Base
                 file = PU_Trunk_hmmwvht_Heavy,
             }
         }
+        part GasTank
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
         part TrunkDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionTrunk,
+            }
+		}
+        part TruckBed
         {
             table uninstall
             {
@@ -401,6 +431,26 @@ module Base
             table uninstall
             {
                 requireUninstalled = ATA2ProtectionDoorRearRight,
+            }
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_hmmwvht_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_hmmwvht_Heavy,
+            }
+        }
+        part EngineDoor
+        {
+            table uninstall
+            {
+                requireUninstalled = ATA2ProtectionHood,
             }
 		}
 
