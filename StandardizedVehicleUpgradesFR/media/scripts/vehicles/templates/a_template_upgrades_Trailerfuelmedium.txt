@@ -1,0 +1,118 @@
+module Base
+{
+	model PU_Chains_FL_Trailerfuelmedium
+    {
+        mesh = vehicles/TrailermovingbigArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_Trailerfuelmedium
+    {
+        mesh = vehicles/TrailermovingbigArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_Trailerfuelmedium
+    {
+        mesh = vehicles/TrailermovingbigArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_Trailerfuelmedium
+    {
+        mesh = vehicles/TrailermovingbigArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_Trailerfuelmedium_Light
+    {
+        mesh = vehicles/TrailermovingbigArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_Trailerfuelmedium_Heavy
+    {
+        mesh = vehicles/TrailermovingbigArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Rack_Trailerfuelmedium
+    {
+        mesh = vehicles/TrailermovingbigArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_Trailerfuelmedium
+	{
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_Trailerfuelmedium,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_Trailerfuelmedium,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_Trailerfuelmedium,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_Trailerfuelmedium,
+            }
+        }
+	}
+}

@@ -1,0 +1,347 @@
+module Base
+{
+	model PU_FL_Window_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_91chevys10
+    {
+        mesh = vehicles/91chevys10Armor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_91chevys10
+    {
+        mesh = vehicles/91chevys10Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_91chevys10
+    {
+        mesh = vehicles/91chevys10Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_91chevys10
+    {
+        mesh = vehicles/91chevys10Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_91chevys10
+    {
+        mesh = vehicles/91chevys10Armor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_91chevys10_Light
+    {
+        mesh = vehicles/91chevys10Armor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_91chevys10_Heavy
+    {
+        mesh = vehicles/91chevys10Armor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	template vehicle PU_Armor_91chevys10
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_91chevys10_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_91chevys10_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_91chevys10_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_91chevys10_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_91chevys10_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_91chevys10_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_91chevys10,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_91chevys10,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_91chevys10,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_91chevys10,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_91chevys10,
+            }
+        }
+	}
+}

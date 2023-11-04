@@ -1,0 +1,484 @@
+module Base
+{
+	model PU_FL_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_RR_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FL_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_RR_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Bullbar_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Chains_FL_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_RR_ETKEvo_Light
+    {
+        mesh = vehicles/ETKEvoArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_RR_ETKEvo_Heavy
+    {
+        mesh = vehicles/ETKEvoArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_ETKEvo
+    {
+        mesh = vehicles/ETKEvoArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	template vehicle PU_Armor_ETKEvo
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_ETKEvo_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_ETKEvo_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_ETKEvo_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_ETKEvo_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
+		part ATA2ProtectionWindowRearLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_ETKEvo_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_ETKEvo_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
+		part ATA2ProtectionWindowRearRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_ETKEvo_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_ETKEvo_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearLeft,
+        part ATA2ProtectionDoorRearLeft
+        {
+            model Light
+            {
+                file = PU_Door_RL_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RL_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearRight,
+        part ATA2ProtectionDoorRearRight
+        {
+            model Light
+            {
+                file = PU_Door_RR_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RR_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_ETKEvo_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_ETKEvo_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_ETKEvo,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_ETKEvo,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_ETKEvo,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_ETKEvo,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_ETKEvo,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_ETKEvo,
+            }
+        }
+	}
+}

@@ -1,0 +1,407 @@
+module Base
+{
+	model PU_FL_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_92wrangler
+    {
+        mesh = vehicles/92wranglerArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_92wrangler
+    {
+        mesh = vehicles/92wranglerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_92wrangler
+    {
+        mesh = vehicles/92wranglerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_92wrangler
+    {
+        mesh = vehicles/92wranglerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_92wrangler
+    {
+        mesh = vehicles/92wranglerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_92wrangler_Light
+    {
+        mesh = vehicles/92wranglerArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_92wrangler_Heavy
+    {
+        mesh = vehicles/92wranglerArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	template vehicle PU_Armor_92wrangler
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_92wrangler_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_92wrangler_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_92wrangler_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_92wrangler_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
+		part ATA2ProtectionWindowRearLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_92wrangler_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_92wrangler_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
+		part ATA2ProtectionWindowRearRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_92wrangler_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_92wrangler_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_92wrangler_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_92wrangler_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_92wrangler,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_92wrangler,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_92wrangler,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_92wrangler,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_92wrangler,
+            }
+        }
+	}
+}

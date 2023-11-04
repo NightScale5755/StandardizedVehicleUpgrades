@@ -1,0 +1,364 @@
+module Base
+{
+	model PU_FL_Window_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FL_Window_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Bullbar_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Chains_FL_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_SportsCar_Light
+    {
+        mesh = vehicles/SportsCarArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_SportsCar_Heavy
+    {
+        mesh = vehicles/SportsCarArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_SportsCar
+    {
+        mesh = vehicles/SportsCarArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	template vehicle PU_Armor_SportsCar
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_SportsCar_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_SportsCar_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_SportsCar_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_SportsCar_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_SportsCar_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_SportsCar_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_SportsCar,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_SportsCar,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_SportsCar,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_SportsCar,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_SportsCar,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_SportsCar,
+            }
+        }
+	}
+}

@@ -1,0 +1,85 @@
+module Base
+{
+	model PU_Chains_FL_Trailerfuelsmall
+    {
+        mesh = vehicles/TrailermovingmediumArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_Trailerfuelsmall
+    {
+        mesh = vehicles/TrailermovingmediumArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Trunk_Trailerfuelsmall_Light
+    {
+        mesh = vehicles/TrailermovingmediumArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_Trailerfuelsmall_Heavy
+    {
+        mesh = vehicles/TrailermovingmediumArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Rack_Trailerfuelsmall
+    {
+        mesh = vehicles/TrailermovingmediumArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_Trailerfuelsmall
+	{
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_Trailerfuelsmall,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_Trailerfuelsmall,
+            }
+        }
+	}
+}

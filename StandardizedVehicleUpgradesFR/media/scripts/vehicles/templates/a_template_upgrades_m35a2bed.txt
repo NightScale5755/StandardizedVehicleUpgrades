@@ -1,0 +1,329 @@
+module Base
+{
+	model PU_FL_Window_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_m35a2bed
+    {
+        mesh = vehicles/m35a2bedArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_m35a2bed
+    {
+        mesh = vehicles/m35a2bedArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_m35a2bed
+    {
+        mesh = vehicles/m35a2bedArmor|chaintires2,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_m35a2bed
+    {
+        mesh = vehicles/m35a2bedArmor|chaintires3,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Hood_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_m35a2bed_Light
+    {
+        mesh = vehicles/m35a2bedArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_m35a2bed_Heavy
+    {
+        mesh = vehicles/m35a2bedArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	template vehicle PU_Armor_m35a2bed
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_m35a2bed_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_m35a2bed_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_m35a2bed_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_m35a2bed_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_m35a2bed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_m35a2bed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_m35a2bed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_m35a2bed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_m35a2bed_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_m35a2bed_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_m35a2bed_Heavy,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_m35a2bed,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_m35a2bed,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_m35a2bed,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_m35a2bed,
+            }
+        }
+	}
+}

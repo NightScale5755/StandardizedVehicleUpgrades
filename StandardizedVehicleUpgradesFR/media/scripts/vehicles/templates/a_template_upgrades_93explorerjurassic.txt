@@ -1,0 +1,466 @@
+module Base
+{
+	model PU_FL_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_RR_93explorerjurassic_Light
+    {
+        mesh = vehicles/93explorerArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_RR_93explorerjurassic_Heavy
+    {
+        mesh = vehicles/93explorerArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_93explorerjurassic
+    {
+        mesh = vehicles/93explorerArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_93explorerjurassic
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_93explorerjurassic_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_93explorerjurassic_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_93explorerjurassic_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_93explorerjurassic_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
+		part ATA2ProtectionWindowRearLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_93explorerjurassic_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_93explorerjurassic_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
+		part ATA2ProtectionWindowRearRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_93explorerjurassic_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_93explorerjurassic_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearLeft,
+        part ATA2ProtectionDoorRearLeft
+        {
+            model Light
+            {
+                file = PU_Door_RL_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RL_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearRight,
+        part ATA2ProtectionDoorRearRight
+        {
+            model Light
+            {
+                file = PU_Door_RR_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RR_93explorerjurassic_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_93explorerjurassic_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_93explorerjurassic_Heavy,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_93explorerjurassic,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_93explorerjurassic,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_93explorerjurassic,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_93explorerjurassic,
+            }
+        }
+	}
+}

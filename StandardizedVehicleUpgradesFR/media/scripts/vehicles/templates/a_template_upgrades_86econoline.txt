@@ -1,0 +1,364 @@
+module Base
+{
+	model PU_FL_Window_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_86econoline
+    {
+        mesh = vehicles/86econolineArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_86econoline
+    {
+        mesh = vehicles/86econolineArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_86econoline
+    {
+        mesh = vehicles/86econolineArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_86econoline
+    {
+        mesh = vehicles/86econolineArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_86econoline
+    {
+        mesh = vehicles/86econolineArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_R_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|doorlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_86econoline_Light
+    {
+        mesh = vehicles/86econolineArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_R_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|doorheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_86econoline_Heavy
+    {
+        mesh = vehicles/86econolineArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_86econoline
+    {
+        mesh = vehicles/86econolineArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_86econoline
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_86econoline_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_86econoline_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_86econoline_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_86econoline_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorsRear,
+        part ATA2ProtectionDoorsRear
+        {
+            model Light
+            {
+                file = PU_Door_R_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_R_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_86econoline_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_86econoline_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_86econoline,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_86econoline,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_86econoline,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_86econoline,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_86econoline,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_86econoline,
+            }
+        }
+	}
+}

@@ -1,0 +1,5 @@
+IGUI_EN = {
+    IGUI_TuningCategory_protectionLight = "Light Protection",
+    IGUI_TuningCategory_protectionHeavy = "Heavy Protection",
+    IGUI_TuningCategory_protectionMods = "General Modifications",
+}

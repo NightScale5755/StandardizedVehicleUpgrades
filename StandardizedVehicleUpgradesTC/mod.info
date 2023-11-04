@@ -1,0 +1,5 @@
+name=Standardized Vehicle Upgrades - Tsars Changes
+id=StandardizedVehicleUpgradesTC
+description=Changes up some TsarsLib code to make car armor less OP.
+poster=
+require=tsarslib,StandardizedVehicleUpgradesCore

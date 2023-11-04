@@ -1,0 +1,424 @@
+module Base
+{
+	model PU_FL_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FL_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_FR_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_RR_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_R_Window_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Bullbar_91celica
+    {
+        mesh = vehicles/91celicaArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Chains_FL_91celica
+    {
+        mesh = vehicles/91celicaArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_91celica
+    {
+        mesh = vehicles/91celicaArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_91celica
+    {
+        mesh = vehicles/91celicaArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_91celica
+    {
+        mesh = vehicles/91celicaArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_91celica_Light
+    {
+        mesh = vehicles/91celicaArmor|doorlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Trunk_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FL_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	model PU_Door_FR_91celica_Heavy
+    {
+        mesh = vehicles/91celicaArmor|doorheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_91celica
+    {
+        mesh = vehicles/91celicaArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004525,
+    }
+
+	template vehicle PU_Armor_91celica
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_91celica_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_91celica_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_91celica_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_91celica_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
+		part ATA2ProtectionWindowRearLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_91celica_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_91celica_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
+		part ATA2ProtectionWindowRearRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_91celica_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_91celica_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_91celica_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_91celica_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_91celica,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_91celica,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_91celica,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_91celica,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_91celica,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_91celica,
+            }
+        }
+	}
+}

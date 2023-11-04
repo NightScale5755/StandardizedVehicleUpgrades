@@ -1,0 +1,484 @@
+module Base
+{
+	model PU_FL_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_RR_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|windowlightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FL_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_FR_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_RL_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_RR_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_F_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_R_Window_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|windowheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Bullbar_SUV
+    {
+        mesh = vehicles/SUVArmor|pushbar_1,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Chains_FL_SUV
+    {
+        mesh = vehicles/SUVArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_FR_SUV
+    {
+        mesh = vehicles/SUVArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Chains_RL_SUV
+    {
+        mesh = vehicles/SUVArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+    }
+
+	model PU_Chains_RR_SUV
+    {
+        mesh = vehicles/SUVArmor|chaintires,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.0035,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|hoodlightfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|trunklightrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|doorfrontlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_RR_SUV_Light
+    {
+        mesh = vehicles/SUVArmor|doorrearlightleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Hood_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|hoodheavyfront,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Trunk_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|trunkheavyrear,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FL_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_FR_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|doorfrontheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Door_RL_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	model PU_Door_RR_SUV_Heavy
+    {
+        mesh = vehicles/SUVArmor|doorrearheavyleft,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+        invertX = TRUE,
+    }
+
+	model PU_Rack_SUV
+    {
+        mesh = vehicles/SUVArmor|roofrack,
+        texture = Vehicles/puv_parts,
+        shader = vehiclewheel,
+        scale = 0.004,
+    }
+
+	template vehicle PU_Armor_SUV
+	{
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontLeft,
+		part ATA2ProtectionWindowFrontLeft
+		{
+			model Light
+			{
+				file = PU_FL_Window_SUV_Light,
+			}
+			model Heavy
+			{
+				file = PU_FL_Window_SUV_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowFrontRight,
+		part ATA2ProtectionWindowFrontRight
+		{
+			model Light
+			{
+				file = PU_FR_Window_SUV_Light,
+			}
+			model Heavy
+			{
+				file = PU_FR_Window_SUV_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearLeft,
+		part ATA2ProtectionWindowRearLeft
+		{
+			model Light
+			{
+				file = PU_RL_Window_SUV_Light,
+			}
+			model Heavy
+			{
+				file = PU_RL_Window_SUV_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindowRearRight,
+		part ATA2ProtectionWindowRearRight
+		{
+			model Light
+			{
+				file = PU_RR_Window_SUV_Light,
+			}
+			model Heavy
+			{
+				file = PU_RR_Window_SUV_Heavy,
+			}
+		}
+
+        template = ATA2Protection/part/ATA2ProtectionWindshield,
+        part ATA2ProtectionWindshield
+        {
+            model Light
+            {
+                file = PU_F_Window_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_F_Window_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWindshieldRear,
+        part ATA2ProtectionWindshieldRear
+        {
+            model Light
+            {
+                file = PU_R_Window_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_R_Window_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionTrunk,
+        part ATA2ProtectionTrunk
+        {
+            model Light
+            {
+                file = PU_Trunk_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Trunk_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontLeft,
+        part ATA2ProtectionDoorFrontLeft
+        {
+            model Light
+            {
+                file = PU_Door_FL_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FL_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorFrontRight,
+        part ATA2ProtectionDoorFrontRight
+        {
+            model Light
+            {
+                file = PU_Door_FR_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_FR_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearLeft,
+        part ATA2ProtectionDoorRearLeft
+        {
+            model Light
+            {
+                file = PU_Door_RL_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RL_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionDoorRearRight,
+        part ATA2ProtectionDoorRearRight
+        {
+            model Light
+            {
+                file = PU_Door_RR_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Door_RR_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionHood,
+        part ATA2ProtectionHood
+        {
+            model Light
+            {
+                file = PU_Hood_SUV_Light,
+            }
+            model Heavy
+            {
+                file = PU_Hood_SUV_Heavy,
+            }
+        }
+
+        template = ATA2Bullbars/part/ATA2Bullbar,
+        part ATA2Bullbar
+        {
+            model Default
+            {
+                file = PU_Bullbar_SUV,
+            }
+        }
+
+        part Tire*
+        {
+            setAllModelsVisible = false,
+            table install
+            {
+                complete = ATATuning2.InstallComplete.TireNotAllModelsVisible,
+            }
+            
+            table uninstall
+            {
+                complete = ATATuning2.UninstallComplete.TireNotAllModelsVisible,
+            }
+            
+            lua
+            {
+                create = ATATuning2.Create.TireNotAllModelsVisible,
+                init = ATATuning2.Init.TireNotAllModelsVisible,
+                checkOperate = Vehicles.CheckOperate.Tire,
+                update = Vehicles.Update.Tire,
+            }
+        }
+
+        template = ATA2Protection/part/ATA2ProtectionWheels,
+        part TireFrontLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FL_SUV,
+            }
+        }
+
+        part TireRearLeft
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RL_SUV,
+            }
+        }
+
+        part TireFrontRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_FR_SUV,
+            }
+        }
+
+        part TireRearRight
+        {
+            model ATAProtection
+            {
+                file = PU_Chains_RR_SUV,
+            }
+        }
+
+        template = ATA2InteractiveTrunk/part/ATA2InteractiveTrunkRoofRack,
+        part ATA2InteractiveTrunkRoofRack
+        {
+            model Default
+            {
+                file = PU_Rack_SUV,
+            }
+        }
+	}
+}

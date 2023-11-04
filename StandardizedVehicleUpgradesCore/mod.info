@@ -1,0 +1,5 @@
+name=Standardized Vehicle Upgrades - Core
+id=StandardizedVehicleUpgradesCore
+description=Just a set of basic files for SVU.
+poster=
+require=tsarslib
